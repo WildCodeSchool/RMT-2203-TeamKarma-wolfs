@@ -1,4 +1,9 @@
 import "../services/main.css";
+import IngredientCard from "@components/IngredientCard";
+import alcoholList from "@assets/alcohol.json";
+import fruitsList from "@assets/fruits.json";
+import softList from "@assets/soft.json";
+import othersList from "@assets/others.json";
 
 export default function Home() {
   return (
@@ -23,103 +28,49 @@ export default function Home() {
           <div className="ingredients-list">
             <h2>Fruits</h2>
             <div className="boxs ingredients-fruits">
-              <div className="ingredient-box fruits-1 dede">
-                <img src="img/Carrot-Medium.png" alt="fraise" />
-              </div>
-              <div className="ingredient-box fruits-2 dede">
-                <img src="img/Cherry-Medium.png" alt="fraise" />
-              </div>
-              <div className="ingredient-box fruits-3 dede">
-                <img src="img/Ginger-Medium.png" alt="fraise" />
-              </div>
-              <div className="ingredient-box fruits-4 dede">
-                <img src="img/lemon.png" alt="fraise" />
-              </div>
-              <div className="ingredient-box fruits-5 dede">
-                <img src="img/Mint-Medium.png" alt="fraise" />
-              </div>
-              <div className="ingredient-box fruits-6 dede">
-                <img src="img/Pineapple.png" alt="fraise" />
-              </div>
-              <div className="ingredient-box fruits-7 dede">
-                <img src="img/Strawberries.png" alt="fraise" />
-              </div>
-              <div className="ingredient-box fruits-8ded">
-                <img src="img/Mango-Medium.png" alt="fraise" />
-              </div>
-              <div className="ingredient-box fruits-9 dede">
-                <img src="img/Lime-Medium.png" alt="fraise" />
-              </div>
-              <div className="ingredient-box fruits-10 dede">
-                <img src="img/Strawberries.png" alt="fraise" />
-              </div>
-              <div className="ingredient-box fruits-1 dede">
-                <img src="img/Carrot-Medium.png" alt="fraise" />
-              </div>
-              <div className="ingredient-box fruits-2 dede">
-                <img src="img/Cherry-Medium.png" alt="fraise" />
-              </div>
-              <div className="ingredient-box fruits-3 dede">
-                <img src="img/Ginger-Medium.png" alt="fraise" />
-              </div>
-              <div className="ingredient-box fruits-8 dede">
-                <img src="img/Mango-Medium.png" alt="fraise" />
-              </div>
+              {fruitsList.map((fruit) => (
+                <IngredientCard
+                  key={fruit.name}
+                  name={fruit.name}
+                  url={fruit.url}
+                />
+              ))}
             </div>
             <div className="ingredients-alcohols">
               <h2>Alcohol</h2>
               <div className="boxs ingredients-fruits">
-                <div className="ingredient-box fruits-1">
-                  <img src="img/Carrot-Medium.png" alt="fraise" />
-                </div>
-                <div className="ingredient-box fruits-2">
-                  <img src="img/Cherry-Medium.png" alt="fraise" />
-                </div>
-                <div className="ingredient-box fruits-3">
-                  <img src="img/Ginger-Medium.png" alt="fraise" />
-                </div>
-                <div className="ingredient-box fruits-4">
-                  <img src="img/lemon.png" alt="fraise" />
-                </div>
-                <div className="ingredient-box fruits-5">
-                  <img src="img/Mint-Medium.png" alt="fraise" />
-                </div>
-                <div className="ingredient-box fruits-6">
-                  <img src="img/Pineapple.png" alt="fraise" />
-                </div>
-                <div className="ingredient-box fruits-7">
-                  <img src="img/Strawberries.png" alt="fraise" />
-                </div>
-                <div className="ingredient-box fruits-8">
-                  <img src="img/Mango-Medium.png" alt="fraise" />
-                </div>
-                <div className="ingredient-box fruits-9">
-                  <img src="img/Lime-Medium.png" alt="fraise" />
-                </div>
-                <div className="ingredient-box fruits-10">
-                  <img src="img/Strawberries.png" alt="fraise" />
-                </div>
-                <div className="ingredient-box fruits-3">
-                  <img src="img/Ginger-Medium.png" alt="fraise" />
-                </div>
-                <div className="ingredient-box fruits-4">
-                  <img src="img/lemon.png" alt="fraise" />
-                </div>
-                <div className="ingredient-box fruits-5">
-                  <img src="img/Mint-Medium.png" alt="fraise" />
-                </div>
-                <div className="ingredient-box fruits-9">
-                  <img src="img/Lime-Medium.png" alt="fraise" />
-                </div>
+                {alcoholList.map((alcohol) => (
+                  <IngredientCard
+                    key={alcohol.name}
+                    name={alcohol.name}
+                    url={alcohol.url}
+                  />
+                ))}
               </div>
             </div>
             <div className="ingredients-soft">
               <h2>Soft</h2>
-              <div className="boxs ingredients-soft">Soft items</div>
+              <div className="boxs ingredients-soft">
+                {softList.map((item) => (
+                  <IngredientCard
+                    key={item.name}
+                    name={item.name}
+                    url={item.url}
+                  />
+                ))}
+              </div>
             </div>
             <div className="ingredients-others">
               <h2>Others</h2>
-              <div className="boxs ingredients-others">Other items</div>
+              <div className="boxs ingredients-others">
+                {othersList.map((other) => (
+                  <IngredientCard
+                    key={other.name}
+                    name={other.name}
+                    url={other.url}
+                  />
+                ))}
+              </div>
             </div>
           </div>
           <div className="search-results">Results</div>
