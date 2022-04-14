@@ -1,55 +1,55 @@
 /* variables */
 :root {
-    --title-color: #7731b0;
-    --main-color: #265a5d;
-    --secondary-color: #d4af37;
-    --text-color: #e0e0e0;
-    --primary-bg: rgba(83, 83, 83, 0.698);
-  }
+  --title-color: #7731b0;
+  --main-color: #265a5d;
+  --secondary-color: #d4af37;
+  --text-color: #e0e0e0;
+  --primary-bg: rgba(83, 83, 83, 0.698);
+}
 
 .boxs {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 60%;
-    background-color: rgba(146, 146, 146, 0.185);
-    margin: 0 auto 60px;
-    border: 2px solid rgb(150, 145, 119);
-    border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 60%;
+  background-color: rgba(146, 146, 146, 0.185);
+  margin: 0 auto 60px;
+  border: 2px solid rgb(150, 145, 119);
+  border-radius: 6px;
 }
 
 .ingredients-box {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .ingredients-list {
-    width: 100%;
-    text-align: center;
-    padding-top: 50px;
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
 }
 
 .ingredients-list h2 {
-    display: inline-block;
-    font-size: 2rem;
-    background-color: #265A5D;
-    color: #D4AF37;
-    margin-bottom: 30px;
-    padding: 5px 20px;
-    border: 1px solid #D4AF37;
-    border-radius: 5px;
+  display: inline-block;
+  font-size: 2rem;
+  background-color: #265a5d;
+  color: #d4af37;
+  margin-bottom: 30px;
+  padding: 5px 20px;
+  border: 1px solid #d4af37;
+  border-radius: 5px;
 }
 
 .ingredient-box {
-    width: 120px;
-    height: 120px;
-    margin: 20px;
-    border-radius: 5px;
+  width: 120px;
+  height: 120px;
+  margin: 20px;
+  border-radius: 5px;
 }
 
 .ingredient-box img {
-    max-width: 100%;
-    cursor: pointer;
-    transition: .3s;
+  max-width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
 }

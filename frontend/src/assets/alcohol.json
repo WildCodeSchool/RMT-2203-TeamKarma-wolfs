@@ -1,0 +1,230 @@
+[
+  {
+    "name": "Gin",
+    "url": "https://www.thecocktaildb.com/images/ingredients/gin-small.png"
+  },
+  {
+    "name": "Dark Rum",
+    "url": "https://www.thecocktaildb.com/images/ingredients/dark%20rum-small.png"
+  },
+  {
+    "name": "Sweet Vermouth",
+    "url": "https://www.thecocktaildb.com/images/ingredients/sweet%20vermouth-small.png"
+  },
+  {
+    "name": "Strawberry schnapps",
+    "url": "https://www.thecocktaildb.com/images/ingredients/strawberry%20schnapps-small.png"
+  },
+  {
+    "name": "Scotch",
+    "url": "https://www.thecocktaildb.com/images/ingredients/scotch-small.png"
+  },
+  {
+    "name": "Apricot brandy",
+    "url": "https://www.thecocktaildb.com/images/ingredients/apricot%20brandy-small.png"
+  },
+  {
+    "name": "Triple sec",
+    "url": "https://www.thecocktaildb.com/images/ingredients/triple%20sec-small.png"
+  },
+  {
+    "name": "Southern Comfort",
+    "url": "https://www.thecocktaildb.com/images/ingredients/southern%20comfort-small.png"
+  },
+  {
+    "name": "Orange bitters",
+    "url": "https://www.thecocktaildb.com/images/ingredients/orange%20bitters-small.png"
+  },
+  {
+    "name": "Brandy",
+    "url": "https://www.thecocktaildb.com/images/ingredients/brandy-small.png"
+  },
+  {
+    "name": "Lemon Vodka",
+    "url": "https://www.thecocktaildb.com/images/ingredients/lemon%20vodka-small.png"
+  },
+  {
+    "name": "Blended whiskey",
+    "url": "https://www.thecocktaildb.com/images/ingredients/blended%20whiskey-small.png"
+  },
+  {
+    "name": "Dry Vermouth",
+    "url": "https://www.thecocktaildb.com/images/ingredients/dry%20vermouth-small.png"
+  },
+  {
+    "name": "Amaretto",
+    "url": "https://www.thecocktaildb.com/images/ingredients/amaretto-small.png"
+  },
+  {
+    "name": "Champagne",
+    "url": "https://www.thecocktaildb.com/images/ingredients/champagne-small.png"
+  },
+  {
+    "name": "Coffee liqueur",
+    "url": "https://www.thecocktaildb.com/images/ingredients/coffee%20liqueur-small.png"
+  },
+  {
+    "name": "Bourbon",
+    "url": "https://www.thecocktaildb.com/images/ingredients/bourbon-small.png"
+  },
+  {
+    "name": "Tequila",
+    "url": "https://www.thecocktaildb.com/images/ingredients/tequila-small.png"
+  },
+  {
+    "name": "Vodka",
+    "url": "https://www.thecocktaildb.com/images/ingredients/vodka-small.png"
+  },
+  {
+    "name": "Anejo rum",
+    "url": "https://www.thecocktaildb.com/images/ingredients/A%C3%B1ejo%20Rum-small.png"
+  },
+  {
+    "name": "Bitters",
+    "url": "https://www.thecocktaildb.com/images/ingredients/bitters-small.png"
+  },
+  {
+    "name": "Kahlua",
+    "url": "https://www.thecocktaildb.com/images/ingredients/kahlua-small.png"
+  },
+  {
+    "name": "Vodka",
+    "url": "https://www.thecocktaildb.com/images/ingredients/vodka-small.png"
+  },
+  {
+    "name": "Dubonnet Rouge",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Dubonnet%20Rouge-small.png"
+  },
+  {
+    "name": "Irish whiskey",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Irish%20whiskey-small.png"
+  },
+  {
+    "name": "Apple brandy",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Apple%20brandy-small.png"
+  },
+  {
+    "name": "Cherry brandy",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Cherry%20brandy-small.png"
+  },
+  {
+    "name": "Creme de Cacao",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Creme%20de%20Cacao-small.png"
+  },
+  {
+    "name": "Port",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Port-small.png"
+  },
+  {
+    "name": "Coffee brandy",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Coffee%20brandy-small.png"
+  },
+  {
+    "name": "Red wine",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Red%20wine-small.png"
+  },
+  {
+    "name": "Rum",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Rum-small.png"
+  },
+  {
+    "name": "Ricard",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Ricard-small.png"
+  },
+  {
+    "name": "Sherry",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Sherry-small.png"
+  },
+  {
+    "name": "Cognac",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Cognac-small.png"
+  },
+  {
+    "name": "Sloe gin",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Sloe%20gin-small.png"
+  },
+  {
+    "name": "Galliano",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Galliano-small.png"
+  },
+  {
+    "name": "Peach Vodka",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Peach%20Vodka-small.png"
+  },
+  {
+    "name": "Ouzo",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Ouzo-small.png"
+  },
+  {
+    "name": "Spiced rum",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Spiced%20rum-small.png"
+  },
+  {
+    "name": "Johnnie Walker",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Johnnie%20Walker-small.png"
+  },
+  {
+    "name": "Apple cider",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Apple%20cider-small.png"
+  },
+  {
+    "name": "Everclear",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Everclear-small.png"
+  },
+  {
+    "name": "Firewater",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Firewater-small.png"
+  },
+  {
+    "name": "Lager",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Lager-small.png"
+  },
+  {
+    "name": "Whiskey",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Whiskey-small.png"
+  },
+  {
+    "name": "Absolut citron",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Absolut%20citron-small.png"
+  },
+  {
+    "name": "Pisco",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Pisco-small.png"
+  },
+  {
+    "name": "Irish cream",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Irish%20cream-small.png"
+  },
+  {
+    "name": "Ale",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Ale-small.png"
+  },
+  {
+    "name": "Chocolate liqueur",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Chocolate%20liqueur-small.png"
+  },
+  {
+    "name": "Midori melon liqueur",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Midori%20melon%20liqueur-small.png"
+  },
+  {
+    "name": "Sambuca",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Sambuca-small.png"
+  },
+  {
+    "name": "Cider",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Cider-small.png"
+  },
+  {
+    "name": "Blackberry brandy",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Blackberry%20brandy-small.png"
+  },
+  {
+    "name": "Creme de cassis",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Creme%20de%20cassis-small.png"
+  },
+  {
+    "name": "Peppermint schnapps",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Peppermint%20schnapps-small.png"
+  }
+]
