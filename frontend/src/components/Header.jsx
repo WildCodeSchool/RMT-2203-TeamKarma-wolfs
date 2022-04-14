@@ -6,7 +6,7 @@ import Logo from "@assets/img/svg/logo.svg";
 export default function Header() {
   const getActiveLinkStyle = ({ isActive }) => {
     if (isActive) {
-      return { color: "orange" };
+      return { color: "#1AEA7E", borderTop: "3px solid #1AEA7E" };
     }
     return null;
   };
@@ -35,8 +35,8 @@ export default function Header() {
                 </NavLink>
               </li>
               <li>
-                <NavLink style={getActiveLinkStyle} to="/ramdom">
-                  Ramdom Cocktail
+                <NavLink style={getActiveLinkStyle} to="/random">
+                  Random Cocktail
                 </NavLink>
               </li>
               <li>

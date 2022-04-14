@@ -7,7 +7,7 @@ export default function Main() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/favorites" element={<Home />} />
-        <Route path="/ramdom" element={<Home />} />
+        <Route path="/random" element={<Home />} />
         <Route path="/shopping" element={<Home />} />
       </Routes>
     </div>

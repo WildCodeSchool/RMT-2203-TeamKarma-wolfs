@@ -1,22 +1,30 @@
-/* FONTS */
-@font-face {
-    font-family: 'Nevrada';
-    src: url('./assets/fonts/AL_Nevrada_Personal_Use_Only.woff2') format('woff2'),
-        url('./assets/fonts/AL_Nevrada_Personal_Use_Only.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: 'Poppins';
-    src: url('./assets/fonts/Poppins-Regular.woff2') format('woff2'),
-        url('./assets/fonts/Poppins-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
+/* BACKGROUND */
+header {
+    background-color: rgba(146, 146, 146, 0.185);
+}
+header #navbar {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    padding: 15px 10px;
+    width: 80%;
+    margin: 0 auto;
+}
 
+
+/* LOGO */
+header .logo {
+    display: flex;
+    align-items: center;
+    color:#7731b0;
+    margin-bottom: 30px;
+} 
+header .logo img {
+    width: 150px;
+}
+
+
+/* TITLE */
 header h1 {
     font-size: 2rem;
     margin-top: 35px;
@@ -27,49 +35,34 @@ header h1 {
     text-transform: uppercase;
     line-height: 2.7rem;
 }
-
 header h1 span {
     font-size: 2.6rem;
-
 }
 
-li a {
-    text-decoration: none;
-    padding: 5px 10px;
-}
 
-header {
-    background-color: rgba(146, 146, 146, 0.185);
-}
-  
-header #navbar {
-display: flex;
-flex-direction: column;
-margin: 10px 0;
-padding: 15px 10px;
-}
-
-header .logo {
-display: flex;
-align-items: center;
-color: #9135dd;
-margin-bottom: 30px;
-}
-
-header .logo img {
-width: 150px;
-}
-
+/* NAVBAR */
 header .menu ul {
-display: flex;
-justify-content: center;
-border-top: 2px solid green;
-}
-
+    display: flex;
+    justify-content: space-around;
+    border-top: 3px solid #1AEA7E;
+    padding: 0px 85px;
+}   
 header .menu ul li {
-font-size: 1.2rem;
-color: #f0e68c;
-list-style: none;
-margin: 0 30px;
-font-family: 'Poppins', 'sans-serif';
+    font-size: 1.2rem;
+    color: #f0e68c;
+    list-style: none;
+    margin: 0 5px;
+    font-family: 'Poppins', 'sans-serif';
+    padding:0px 15px;
+}
+header .menu ul li a {
+    text-decoration: none;
+    padding: 13px 10px;
+    color: #f0e68c;
+    text-align: center;
+    display: block;
+}
+header .menu ul li a:hover {
+    border-top: 3px solid #1AEA7E;
+    transition: .2s;
 }
