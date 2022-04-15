@@ -1,3 +1,22 @@
+/* FONTS */
+@font-face {
+  font-family: "Nevrada";
+  src: url("../assets/fonts/AL_Nevrada_Personal_Use_Only.woff2") format("woff2"),
+    url("../assets/fonts/AL_Nevrada_Personal_Use_Only.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Poppins-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   margin: 0;
   font-family: sans-serif;
@@ -195,9 +214,6 @@ table {
 }
 
 body {
-  /* background-image: url(./assets/img/body-bg.jpg);
-  background-repeat: no-repeat; */
-  /* background-size: cover; */
   background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
     linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
@@ -220,45 +236,4 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-header {
-  background-color: rgba(146, 146, 146, 0.185);
-}
-
-header #navbar {
-  display: flex;
-  flex-direction: column;
-  margin: 10px 0;
-  padding: 15px 10px;
-}
-
-header .logo {
-  display: flex;
-  align-items: center;
-  color: #9135dd;
-  margin-bottom: 30px;
-}
-
-header .logo img {
-  width: 150px;
-}
-
-header h1 {
-  font-size: 2.3rem;
-  margin-top: 35px;
-  text-shadow: 1px 1px 1px #ccba6a;
-  letter-spacing: 1px;
-}
-
-header .menu ul {
-  display: flex;
-  justify-content: center;
-}
-
-header .menu ul li {
-  font-size: 1.2rem;
-  color: #f0e68c;
-  list-style: none;
-  margin: 0 30px;
 }
