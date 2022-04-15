@@ -13,21 +13,25 @@ export default function Home() {
           <div className="container">
             <div className="ingredients-box">
               <div className="ingredient-box ingredient1">
-                <img src="img/Strawberries.png" alt="fraise" />
+                {" "}
+                <img src="../src/assets/img/svg/icon.svg" alt="question mark" />
               </div>
               <div className="ingredient-box ingredient2">
-                <img src="img/lemon.png" alt="fraise" />
+                {" "}
+                <img src="../src/assets/img/svg/icon.svg" alt="question mark" />
               </div>
               <div className="ingredient-box ingredient3">
-                <img src="img/Mint-Medium.png" alt="fraise" />
+                <img src="../src/assets/img/svg/icon.svg" alt="question mark" />
               </div>
             </div>
-            <button type="button">Bouton</button>
+            <button className="select-button" type="button">
+              Select
+            </button>
           </div>
 
           <div className="ingredients-list">
-            <h2>Fruits</h2>
-            <div className="boxs ingredients-fruits">
+            <div className="full-box">
+              <h2>Fruits</h2>
               {fruitsList.map((fruit) => (
                 <IngredientCard
                   key={fruit.name}
@@ -37,8 +41,8 @@ export default function Home() {
               ))}
             </div>
             <div className="ingredients-alcohols">
-              <h2>Alcohol</h2>
-              <div className="boxs ingredients-fruits">
+              <div className="full-box">
+                <h2>Alcohol</h2>
                 {alcoholList.map((alcohol) => (
                   <IngredientCard
                     key={alcohol.name}
@@ -49,8 +53,8 @@ export default function Home() {
               </div>
             </div>
             <div className="ingredients-soft">
-              <h2>Soft</h2>
-              <div className="boxs ingredients-soft">
+              <div className="full-box">
+                <h2>Soft</h2>
                 {softList.map((item) => (
                   <IngredientCard
                     key={item.name}
@@ -61,8 +65,8 @@ export default function Home() {
               </div>
             </div>
             <div className="ingredients-others">
-              <h2>Others</h2>
-              <div className="boxs ingredients-others">
+              <div className="full-box">
+                <h2>Others</h2>
                 {othersList.map((other) => (
                   <IngredientCard
                     key={other.name}
