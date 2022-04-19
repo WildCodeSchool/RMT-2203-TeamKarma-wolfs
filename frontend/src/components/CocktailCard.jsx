@@ -21,9 +21,6 @@ export default function CocktailCard() {
             <h3>Recipe</h3>
             <p>djhjkghd</p>
           </div>
-          <button type="button" className="card-btn">
-            Random
-          </button>
         </div>
       </div>
     </section>

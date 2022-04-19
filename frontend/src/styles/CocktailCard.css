@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
   margin: 70px auto;
-  padding: 20px;
-  width: 60%;
+  padding: 40px;
+  width: 50%;
+  font-family: "poppins", sans-serif;
   background-color: rgb(224, 88, 174);
 }
 
 .cocktail-name {
-  font-family: "poppins", sans-serif;
   font-size: 2.6rem;
   font-weight: 600;
   color: yellow;
@@ -19,9 +19,38 @@
 .card-top {
   display: flex;
   justify-content: space-between;
-  padding-left: 80px;
+  margin-bottom: 30px;
 }
 
-.card-img {
+.card-top .ingredients {
+  width: 70%;
+  padding: 15px;
+  background-color: beige;
+}
+
+.card-top .ingredients h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.card-top .card-img {
   background-color: yellow;
+  width: 100px;
+  height: 100px;
+}
+
+.card-bottom {
+  background-color: aliceblue;
+  height: 300px;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.card-bottom h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+.card-bottom p {
+  font-size: 0.9rem;
 }
