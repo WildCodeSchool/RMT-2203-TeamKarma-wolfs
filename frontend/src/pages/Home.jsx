@@ -1,7 +1,9 @@
+import CocktailCard from "@components/CocktailCard";
+
 export default function Home() {
   return (
     <div>
-      <h1>coucou</h1>
+      <CocktailCard />
     </div>
   );
 }

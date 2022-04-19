@@ -1,0 +1,27 @@
+.card-box {
+  display: flex;
+  flex-direction: column;
+  margin: 70px auto;
+  padding: 20px;
+  width: 60%;
+  background-color: rgb(224, 88, 174);
+}
+
+.cocktail-name {
+  font-family: "poppins", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: yellow;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 80px;
+}
+
+.card-img {
+  background-color: yellow;
+}
