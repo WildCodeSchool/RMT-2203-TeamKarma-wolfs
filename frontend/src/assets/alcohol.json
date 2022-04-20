@@ -1,5 +1,13 @@
 [
   {
+    "name": "Light Rum",
+    "url": "https://www.thecocktaildb.com/images/ingredients/light%20rum-small.png"
+  },
+  {
+    "name": "Applejack",
+    "url": "https://www.thecocktaildb.com/images/ingredients/applejack-small.png"
+  },
+  {
     "name": "Gin",
     "url": "https://www.thecocktaildb.com/images/ingredients/gin-small.png"
   },
@@ -86,10 +94,6 @@
   {
     "name": "Kahlua",
     "url": "https://www.thecocktaildb.com/images/ingredients/kahlua-small.png"
-  },
-  {
-    "name": "Vodka",
-    "url": "https://www.thecocktaildb.com/images/ingredients/vodka-small.png"
   },
   {
     "name": "Dubonnet Rouge",

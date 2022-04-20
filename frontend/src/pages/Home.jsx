@@ -1,27 +1,48 @@
-import "../services/main.css";
+import "../styles/main.css";
 import IngredientCard from "@components/IngredientCard";
 import alcoholList from "@assets/alcohol.json";
 import fruitsList from "@assets/fruits.json";
 import softList from "@assets/soft.json";
 import othersList from "@assets/others.json";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "./src/pages/homeScript.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div>
       <main>
         <div id="ingredients-finder">
           <div className="container">
             <div className="ingredients-box">
-              <div className="ingredient-box ingredient1">
-                {" "}
-                <img src="../src/assets/img/svg/icon.svg" alt="question mark" />
+              <div className="ingredient-box">
+                <img
+                  className="ingredient1 anim1"
+                  src="../src/assets/img/svg/icon.svg"
+                  alt="question mark"
+                />
               </div>
-              <div className="ingredient-box ingredient2">
-                {" "}
-                <img src="../src/assets/img/svg/icon.svg" alt="question mark" />
+              <div className="ingredient-box">
+                <img
+                  className="ingredient2 anim2"
+                  src="../src/assets/img/svg/icon.svg"
+                  alt="question mark"
+                />
               </div>
-              <div className="ingredient-box ingredient3">
-                <img src="../src/assets/img/svg/icon.svg" alt="question mark" />
+              <div className="ingredient-box">
+                <img
+                  className="ingredient3 anim3"
+                  src="../src/assets/img/svg/icon.svg"
+                  alt="question mark"
+                />
               </div>
             </div>
             <button className="select-button" type="button">

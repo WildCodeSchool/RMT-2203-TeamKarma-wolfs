@@ -29,18 +29,17 @@
 
 .ingredient-box img {
   height: 55%;
-  opacity: 0;
 }
 
-.ingredient-box:nth-child(1) img {
+.anim1 {
   animation: iconAppear 2s ease-out infinite;
 }
 
-.ingredient-box:nth-child(2) img {
+.anim2 {
   animation: iconAppear 2s ease-out 0.5s infinite;
 }
 
-.ingredient-box:nth-child(3) img {
+.anim3 {
   animation: iconAppear 2s ease-out 1s infinite;
 }
 
@@ -135,4 +134,9 @@
 .box img:hover {
   transform: rotate(-8deg);
   opacity: 0.8;
+}
+
+.selected > p {
+  color: var(--secondary-color);
+  transition: 0.3s;
 }
