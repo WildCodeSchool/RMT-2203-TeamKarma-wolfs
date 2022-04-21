@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Tea",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Light%20rum-small.png"
+  },
+  {
+    "name": "Lime juice",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Lime%20juice-small.png"
+  },
+  {
+    "name": "Carbonated water",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Carbonated%20water-small.png"
+  },
+  {
+    "name": "Grapefruit juice",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Grapefruit%20juice-small.png"
+  },
+  {
+    "name": "Apple juice",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Apple%20juice-small.png"
+  },
+  {
+    "name": "Pineapple juice",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Pineapple%20juice-small.png"
+  },
+  {
+    "name": "Lemon juice",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Lemon%20juice-small.png"
+  },
+  {
+    "name": "Milk",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Milk-small.png"
+  },
+  {
+    "name": "Tomato juice",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Tomato%20juice-small.png"
+  },
+  {
+    "name": "Coffee",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Coffee-small.png"
+  },
+  {
+    "name": "Water",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Water-small.png"
+  },
+  {
+    "name": "Espresso",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Espresso-small.png"
+  },
+  {
+    "name": "Cranberry juice",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Cranberry%20juice-small.png"
+  },
+  {
+    "name": "Grape juice",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Grape%20juice-small.png"
+  },
+  {
+    "name": "Peach nectar",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Peach%20nectar-small.png"
+  },
+  {
+    "name": "Lemonade",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Lemonade-small.png"
+  },
+  {
+    "name": "Sprite",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Sprite-small.png"
+  },
+  {
+    "name": "7-Up",
+    "url": "https://www.thecocktaildb.com/images/ingredients/7-Up-small.png"
+  }
+]
