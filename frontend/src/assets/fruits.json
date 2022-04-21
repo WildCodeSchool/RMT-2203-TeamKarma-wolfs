@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Watermelon",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Watermelon-small.png"
+  },
+  {
+    "name": "Strawberries",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Strawberries-small.png"
+  },
+  {
+    "name": "Mango",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Mango-small.png"
+  },
+  {
+    "name": "Lime",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Lime-small.png"
+  },
+  {
+    "name": "Cantaloupe",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Cantaloupe-small.png"
+  },
+  {
+    "name": "Berries",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Berries-small.png"
+  },
+  {
+    "name": "Grapes",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Grapes-small.png"
+  },
+  {
+    "name": "Kiwi",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Kiwi-small.png"
+  },
+  {
+    "name": "Orange",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Orange-small.png"
+  },
+  {
+    "name": "Cranberries",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Cranberries-small.png"
+  },
+  {
+    "name": "Lemon",
+    "url": "https://www.thecocktaildb.com/images/ingredients/Lemon-small.png"
+  }
+]
