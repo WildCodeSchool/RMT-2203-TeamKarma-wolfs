@@ -1,21 +1,40 @@
 import "../styles/main.css";
 import IngredientCard from "@components/IngredientCard";
+import IngredientSelection from "@components/IngredientSelection";
 import alcoholList from "@assets/alcohol.json";
 import fruitsList from "@assets/fruits.json";
 import softList from "@assets/soft.json";
 import othersList from "@assets/others.json";
-import { useEffect } from "react";
+import { useState } from "react";
 
 export default function Home() {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "./src/pages/homeScript.js";
-    script.async = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  const [ingredientSelect, setIngredientSelect] = useState([]);
+  const handleIngredientSelect = (e, ingredientName) => {
+    if (e.target.parentElement.parentElement.classList.contains("selected")) {
+      e.target.parentElement.parentElement.classList.remove("selected");
+      if (ingredientSelect.indexOf(ingredientName) !== -1) {
+        if (ingredientSelect.length > 1) {
+          const tempArray = [...ingredientSelect];
+          tempArray.splice(tempArray.indexOf(ingredientName), 1);
+          setIngredientSelect(tempArray);
+        } else {
+          setIngredientSelect([]);
+        }
+      } else {
+        console.error("A problem occured while deselecting an ingredient");
+      }
+    } else if (ingredientSelect.length < 3) {
+      e.target.parentElement.parentElement.classList.add("selected");
+      if (ingredientSelect.length > 0) {
+        setIngredientSelect([...ingredientSelect, ingredientName]);
+      } else {
+        setIngredientSelect([ingredientName]);
+      }
+    } else {
+      console.warn("There are already 3 ingredients selected!");
+      console.warn(`Ingredients : ${ingredientSelect}`);
+    }
+  };
 
   return (
     <div>
@@ -23,27 +42,7 @@ export default function Home() {
         <div id="ingredients-finder">
           <div className="container">
             <div className="ingredients-box">
-              <div className="ingredient-box">
-                <img
-                  className="ingredient1 anim1"
-                  src="../src/assets/img/svg/icon.svg"
-                  alt="question mark"
-                />
-              </div>
-              <div className="ingredient-box">
-                <img
-                  className="ingredient2 anim2"
-                  src="../src/assets/img/svg/icon.svg"
-                  alt="question mark"
-                />
-              </div>
-              <div className="ingredient-box">
-                <img
-                  className="ingredient3 anim3"
-                  src="../src/assets/img/svg/icon.svg"
-                  alt="question mark"
-                />
-              </div>
+              <IngredientSelection ingredientSelect={ingredientSelect} />
             </div>
             <button className="select-button" type="button">
               Select
@@ -58,6 +57,8 @@ export default function Home() {
                   key={fruit.name}
                   name={fruit.name}
                   url={fruit.url}
+                  ingredientSelect={ingredientSelect}
+                  handleIngredientSelect={handleIngredientSelect}
                 />
               ))}
             </div>
@@ -69,6 +70,8 @@ export default function Home() {
                     key={alcohol.name}
                     name={alcohol.name}
                     url={alcohol.url}
+                    ingredientSelect={ingredientSelect}
+                    handleIngredientSelect={handleIngredientSelect}
                   />
                 ))}
               </div>
@@ -81,6 +84,8 @@ export default function Home() {
                     key={item.name}
                     name={item.name}
                     url={item.url}
+                    ingredientSelect={ingredientSelect}
+                    handleIngredientSelect={handleIngredientSelect}
                   />
                 ))}
               </div>
@@ -93,6 +98,8 @@ export default function Home() {
                     key={other.name}
                     name={other.name}
                     url={other.url}
+                    ingredientSelect={ingredientSelect}
+                    handleIngredientSelect={handleIngredientSelect}
                   />
                 ))}
               </div>

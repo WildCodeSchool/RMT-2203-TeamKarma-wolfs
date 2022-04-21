@@ -140,3 +140,9 @@
   color: var(--secondary-color);
   transition: 0.3s;
 }
+
+.ingredientButton {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+}
