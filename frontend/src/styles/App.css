@@ -1,17 +1,17 @@
 /* FONTS */
 @font-face {
-  font-family: 'Nevrada';
-  src: url('../assets/fonts/AL_Nevrada_Personal_Use_Only.woff2') format('woff2'),
-      url('../assets/fonts/AL_Nevrada_Personal_Use_Only.woff') format('woff');
+  font-family: "Nevrada";
+  src: url("../assets/fonts/AL_Nevrada_Personal_Use_Only.woff2") format("woff2"),
+    url("../assets/fonts/AL_Nevrada_Personal_Use_Only.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins-Regular.woff2') format('woff2'),
-      url('../assets/fonts/Poppins-Regular.woff') format('woff');
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Poppins-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

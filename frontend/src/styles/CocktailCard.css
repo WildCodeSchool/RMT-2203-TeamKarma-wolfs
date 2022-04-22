@@ -5,14 +5,18 @@
   padding: 40px;
   width: 50%;
   font-family: "poppins", sans-serif;
-  background-color: rgb(224, 88, 174);
+  background-color: #141414;
+  border-radius: 5px;
+  box-shadow: 5px 5px 80px #7731b080;
 }
 
 .cocktail-name {
-  font-size: 2.6rem;
-  font-weight: 600;
-  color: yellow;
-  text-transform: uppercase;
+  font-size: 2.7rem;
+  font-family: "Nevrada", "sans-serif";
+  text-shadow: 1px 1px 1px #ccba6a;
+  /* font-weight: 600; */
+  color: #7731b0;
+  /* text-transform: uppercase; */
   margin-bottom: 40px;
 }
 
@@ -25,23 +29,25 @@
 .card-top .ingredients {
   width: 70%;
   padding: 15px;
-  background-color: beige;
+  color: #e4e4e4;
 }
 
 .card-top .ingredients h3 {
   font-size: 1.6rem;
   margin-bottom: 15px;
+  color: #f0e68c;
 }
 
 .card-top .card-img {
-  background-color: yellow;
   width: 100px;
   height: 100px;
+  margin-right: 10px;
 }
 
 .card-bottom {
-  background-color: aliceblue;
-  height: 300px;
+  border: solid 2px #1aea7e;
+  border-radius: 10px;
+  height: 250px;
   padding: 20px;
   margin-bottom: 30px;
   text-align: left;
@@ -50,7 +56,10 @@
 .card-bottom h3 {
   font-size: 1.6rem;
   margin-bottom: 15px;
+  color: #f0e68c;
 }
 .card-bottom p {
   font-size: 0.9rem;
+  line-height: 32px;
+  color: #e4e4e4;
 }
