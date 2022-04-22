@@ -1,22 +1,27 @@
 // import "@styles/CocktailCard.css";
 // import "@styles/App.css";
-import "../styles/CocktailCard.css";
+// import "../styles/CocktailCard.css";
 
 // import { useState, useEffect } from "react";
+// import axios from "axios";
 
 export default function CocktailCard() {
   // const [card, setCard] = useState("");
 
   // useEffect(() => {
   //   const controller = new AbortController();
-  //   const signal = controller.signal;
+  //   const { signal } = controller.signal;
+
   //   axios
   //     .get(
-  //       `www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${props.idDrink}`,
+  //       `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita`,
   //       { signal }
   //     )
-  //     .then((response) => response.json())
-  //     .then((data) => setCard(data));
+  //     .then((response) => response.data)
+  //     .then((data) => {
+  //       setCard(data.drinks[0]);
+  //     });
+
   //   return function cleanup() {
   //     controller.abort();
   //   };
@@ -26,26 +31,26 @@ export default function CocktailCard() {
     <section className="cocktail-card">
       <div className="container">
         <div className="card-box">
-          {/* <h2 className="cocktail-name">{drinks.strDrink}</h2>
+          {/* <h2 className="cocktail-name">{card.strDrink}</h2>
           <div className="card-top">
             <div className="ingredients">
               <h3>Ingrédients</h3>
               <ul>
-                {drinks.map((drink) => {
-                  for (let i = 0; i < 15; i++) {
-                    return <li>drink[`strIngredient${i}`]</li>; //si null rien, si non on met un li
+                {card.map(drink => ({
+                  for (let i = 0; i < 15; i += 1) {
+                    <li>{drink[`strIngredient${i}`]}</li>;
+                    // si null rien, si non on met un li
                   }
                 })}
               </ul>
-              <p>{drinks.strIngredient1}</p>
             </div>
             <div className="card-img">
-              <img src={drinks.strDrinkThumb} alt="Cocktail's picture"></img>
+              <img src={card.strDrinkThumb} alt="cocktail" />
             </div>
           </div>
           <div className="card-bottom">
             <h3>Recipe</h3>
-            <p>{drinks.strInstructions}</p>
+            <p>{card.strInstructions}</p>
           </div> */}
 
           <h2 className="cocktail-name">My Cocktail</h2>

@@ -1,7 +1,7 @@
 import "../styles/main.css";
 import IngredientCard from "@components/IngredientCard";
 import IngredientSelection from "@components/IngredientSelection";
-import CocktailCard from "@components/CocktailCard";
+// import CocktailCard from "@components/CocktailCard";
 import alcoholList from "@assets/alcohol.json";
 import fruitsList from "@assets/fruits.json";
 import softList from "@assets/soft.json";
