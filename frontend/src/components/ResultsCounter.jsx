@@ -6,5 +6,5 @@ export default function ResultsCounter({ results, easterEgg }) {
     counter = results;
   }
 
-  return <p id="counter">Résultats : {counter}</p>;
+  return <p>Results : {counter}</p>;
 }

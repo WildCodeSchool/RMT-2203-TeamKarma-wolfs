@@ -199,7 +199,20 @@
   color: var(--text-color);
 }
 
-#counter {
-  margin: 10px auto;
+#resultsButton {
+  width: 25%;
+  background-color: rgba(146, 146, 146, 0.185);
+  margin: 0 auto 80px;
+  border: 2px solid rgb(150, 145, 119);
+  border-radius: 6px;
+}
+#resultsButton > button {
+  margin: 10px;
+}
+
+#resultsButton > p {
+  font-family: sans-serif;
+  font-size: 1.1rem;
   color: var(--text-color);
+  margin: 10px auto;
 }

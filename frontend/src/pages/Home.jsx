@@ -239,18 +239,20 @@ export default function Home() {
             <div className="ingredients-box">
               <IngredientSelection ingredientSelect={ingredientSelect} />
             </div>
-            <ResultsCounter
-              results={filteredResults.length}
-              easterEgg={displayEasterEgg}
-            />
-            <button
-              className="select-button"
-              type="button"
-              onClick={(e) => toggleSearchResults(e)}
-              value="search"
-            >
-              Select
-            </button>
+            <div id="resultsButton">
+              <ResultsCounter
+                results={filteredResults.length}
+                easterEgg={displayEasterEgg}
+              />
+              <button
+                className="select-button"
+                type="button"
+                onClick={(e) => toggleSearchResults(e)}
+                value="search"
+              >
+                Search
+              </button>
+            </div>
           </div>
 
           <div className="ingredients-list">
