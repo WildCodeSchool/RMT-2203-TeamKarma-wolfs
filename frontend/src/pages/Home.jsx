@@ -1,6 +1,7 @@
 import "../styles/main.css";
 import IngredientCard from "@components/IngredientCard";
 import IngredientSelection from "@components/IngredientSelection";
+import ResultsCounter from "@components/ResultsCounter";
 import ResultsCards from "@components/ResultsCards";
 import alcoholList from "@assets/alcohol.json";
 import fruitsList from "@assets/fruits.json";
@@ -81,6 +82,7 @@ export default function Home() {
     },
   ];
   const [filteredResults, setFilteredResults] = useState(sampleCall.drinks);
+  const [displayEasterEgg, setDisplayEsterEgg] = useState(true);
 
   useEffect(() => {
     setFirstIngredient(ingredientSelect[0]);
@@ -171,6 +173,7 @@ export default function Home() {
         displayResults.push(results1[idToAdd]);
       }
       setFilteredResults(displayResults);
+      setDisplayEsterEgg(false);
     } else if (
       typeof results1 !== "undefined" &&
       typeof results2 !== "undefined"
@@ -190,10 +193,13 @@ export default function Home() {
         displayResults.push(results1[idToAdd]);
       }
       setFilteredResults(displayResults);
+      setDisplayEsterEgg(false);
     } else if (typeof results1 !== "undefined") {
       setFilteredResults(results1);
+      setDisplayEsterEgg(false);
     } else {
       setFilteredResults(easterEgg);
+      setDisplayEsterEgg(true);
     }
   }
 
@@ -215,6 +221,16 @@ export default function Home() {
     }
   };
 
+  useEffect(() => {
+    searchCocktails();
+  }, [results1]);
+  useEffect(() => {
+    searchCocktails();
+  }, [results2]);
+  useEffect(() => {
+    searchCocktails();
+  }, [results3]);
+
   return (
     <div>
       <main>
@@ -223,6 +239,10 @@ export default function Home() {
             <div className="ingredients-box">
               <IngredientSelection ingredientSelect={ingredientSelect} />
             </div>
+            <ResultsCounter
+              results={filteredResults.length}
+              easterEgg={displayEasterEgg}
+            />
             <button
               className="select-button"
               type="button"

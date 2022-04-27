@@ -198,3 +198,8 @@
   font-size: 1.1rem;
   color: var(--text-color);
 }
+
+#counter {
+  margin: 10px auto;
+  color: var(--text-color);
+}
