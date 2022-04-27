@@ -15,10 +15,13 @@ export default function SoftCocktails() {
   }, []);
 
   return (
-    <div>
-      {softCocktail.map((cocktail) => (
-        <ResultCocktails key={cocktail.idDrink} cocktail={cocktail} />
-      ))}
+    <div className="show-cocktails">
+      <h2>Soft Cocktails</h2>
+      <div className="scroller">
+        {softCocktail.map((cocktail) => (
+          <ResultCocktails key={cocktail.idDrink} cocktail={cocktail} />
+        ))}
+      </div>
     </div>
   );
 }
