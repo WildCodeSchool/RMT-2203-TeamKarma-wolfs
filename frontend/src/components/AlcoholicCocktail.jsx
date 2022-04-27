@@ -14,10 +14,13 @@ export default function AlcoholCocktail() {
   }, []);
 
   return (
-    <div>
-      {alcoholCocktail.map((cocktail) => (
-        <ResultCocktails key={cocktail.idDrink} cocktail={cocktail} />
-      ))}
+    <div className="show-cocktails">
+      <h2>Alcoholic Cocktails</h2>
+      <div className="scroller">
+        {alcoholCocktail.map((cocktail) => (
+          <ResultCocktails key={cocktail.idDrink} cocktail={cocktail} />
+        ))}
+      </div>
     </div>
   );
 }
