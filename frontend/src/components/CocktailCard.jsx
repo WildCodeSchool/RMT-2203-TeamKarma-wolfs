@@ -1,19 +1,19 @@
 import "@styles/CocktailCard.css";
-import "@styles/App.css";
+// import "@styles/App.css";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import DrinkIngredients from "./DrinkIngredients";
 
-export default function CocktailCard() {
+// Composant enfant
+export default function CocktailCard({ handleDisplay, id }) {
   const [card, setCard] = useState([]);
 
   useEffect(() => {
     const controller = new AbortController();
     const { signal } = controller.signal;
-
     axios
-      .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=mojito`, {
+      .get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`, {
         signal,
       })
       .then((response) => response.data)
@@ -32,6 +32,9 @@ export default function CocktailCard() {
         <div className="card-box">
           <h2 className="cocktail-name">{card.strDrink}</h2>
           <div className="card-top">
+            <button type="button" onClick={(e) => handleDisplay(e)}>
+              Close
+            </button>
             <div className="ingredients">
               <h3>Ingrédients</h3>
               <ul>
