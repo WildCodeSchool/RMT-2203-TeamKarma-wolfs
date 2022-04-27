@@ -1,6 +1,5 @@
 import "@styles/CocktailCard.css";
 import "@styles/App.css";
-import "../styles/CocktailCard.css";
 
 import { useState, useEffect } from "react";
 import axios from "axios";
