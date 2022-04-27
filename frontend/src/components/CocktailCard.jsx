@@ -1,11 +1,9 @@
 import "@styles/CocktailCard.css";
-// import "@styles/App.css";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
 import DrinkIngredients from "./DrinkIngredients";
 
-// Composant enfant
 export default function CocktailCard({ handleDisplay, id }) {
   const [card, setCard] = useState([]);
 
@@ -28,27 +26,29 @@ export default function CocktailCard({ handleDisplay, id }) {
 
   return (
     <section className="cocktail-card">
-      <div className="container">
-        <div className="card-box">
-          <h2 className="cocktail-name">{card.strDrink}</h2>
-          <div className="card-top">
-            <button type="button" onClick={(e) => handleDisplay(e)}>
-              Close
-            </button>
-            <div className="ingredients">
-              <h3>Ingrédients</h3>
-              <ul>
-                <DrinkIngredients drink={card} />
-              </ul>
-            </div>
-            <div className="card-img">
-              <img src={card.strDrinkThumb} alt="cocktail" />
-            </div>
+      <div className="card-box">
+        <button
+          type="button"
+          id="closeRecipe"
+          onClick={(e) => handleDisplay(e)}
+        >
+          X
+        </button>
+        <h2 className="cocktail-name">{card.strDrink}</h2>
+        <div className="card-top">
+          <div className="ingredients">
+            <h3>Ingrédients</h3>
+            <ul>
+              <DrinkIngredients drink={card} />
+            </ul>
           </div>
-          <div className="card-bottom">
-            <h3>Recipe</h3>
-            <p>{card.strInstructions}</p>
+          <div className="card-img">
+            <img src={card.strDrinkThumb} alt="cocktail" />
           </div>
+        </div>
+        <div className="card-bottom">
+          <h3>Recipe</h3>
+          <p>{card.strInstructions}</p>
         </div>
       </div>
     </section>

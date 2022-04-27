@@ -1,5 +1,5 @@
 import "../styles/main.css";
-// Mon parent
+
 export default function ResultsCards({ name, image, id, handleDisplay }) {
   return (
     <div id={`${id}`} className="resultBox">
