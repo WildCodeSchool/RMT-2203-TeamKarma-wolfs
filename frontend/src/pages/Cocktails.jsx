@@ -1,10 +1,12 @@
 import SoftCocktails from "@components/SoftCocktails";
+import "../styles/cocktail.css";
+import AlcoholCocktail from "../components/AlcoholicCocktail";
 
 export default function Cocktails() {
   return (
     <div>
       <div>
-        <h2>Cocktails</h2>
+        <AlcoholCocktail />
         <SoftCocktails />
       </div>
     </div>
