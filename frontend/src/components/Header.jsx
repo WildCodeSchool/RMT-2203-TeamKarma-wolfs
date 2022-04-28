@@ -40,6 +40,11 @@ export default function Header() {
                 </NavLink>
               </li>
               <li>
+                <NavLink style={getActiveLinkStyle} to="/cocktails">
+                  Cocktails
+                </NavLink>
+              </li>
+              <li>
                 <NavLink style={getActiveLinkStyle} to="/shopping">
                   Shopping list
                 </NavLink>
