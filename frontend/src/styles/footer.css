@@ -1,4 +1,4 @@
-.footer {
+footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,13 +6,13 @@
   height: 5rem;
 }
 
-.footer p {
+footer p {
   color: rgb(186, 186, 186);
   font-family: "Poppins", "sans-serif";
   font-size: 0.8rem;
   line-height: 1.5rem;
 }
 
-.footer a {
+footer a {
   color: #f0e68c;
 }
