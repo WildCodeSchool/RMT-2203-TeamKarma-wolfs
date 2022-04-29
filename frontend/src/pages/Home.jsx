@@ -209,7 +209,7 @@ export default function Home() {
   const handleCocktailResults = () => {
     setCocktailResults(!cocktailResults);
   };
-  const handleCocktailsDisplay = (e) => {
+  const handleDisplay = (e) => {
     setDisplayRecipe(!displayRecipe);
     if (e.target.parentElement.id) {
       setSelectedId(e.target.parentElement.id);
@@ -334,7 +334,7 @@ export default function Home() {
                   id={elem.idDrink}
                   name={elem.strDrink}
                   image={elem.strDrinkThumb}
-                  handleCocktailsDisplay={handleCocktailsDisplay}
+                  handleDisplay={handleDisplay}
                   displayRecipe={displayRecipe}
                 />
               ))}
@@ -342,10 +342,7 @@ export default function Home() {
           ) : null}
           {displayRecipe === true ? (
             <div className="container">
-              <CocktailCard
-                handleCocktailsDisplay={handleCocktailsDisplay}
-                id={selectedId}
-              />
+              <CocktailCard handleDisplay={handleDisplay} id={selectedId} />
             </div>
           ) : null}
         </div>

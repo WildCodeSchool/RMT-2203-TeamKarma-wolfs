@@ -1,11 +1,6 @@
 import "../styles/main.css";
 
-export default function ResultsCards({
-  name,
-  image,
-  id,
-  handleCocktailsDisplay,
-}) {
+export default function ResultsCards({ name, image, id, handleDisplay }) {
   return (
     <div id={`${id}`} className="resultBox">
       <img src={image} alt={name} value={id} />
@@ -14,7 +9,7 @@ export default function ResultsCards({
         className="recipeButton"
         type="button"
         value="recipeHidden"
-        onClick={(e) => handleCocktailsDisplay(e)}
+        onClick={(e) => handleDisplay(e)}
       >
         See recipe
       </button>

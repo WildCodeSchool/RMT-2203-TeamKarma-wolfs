@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import DrinkIngredients from "./DrinkIngredients";
 
-export default function CocktailCard({ handleCocktailsDisplay, id }) {
+export default function CocktailCard({ handleDisplay, id }) {
   const [card, setCard] = useState([]);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function CocktailCard({ handleCocktailsDisplay, id }) {
         <button
           type="button"
           id="closeRecipe"
-          onClick={(e) => handleCocktailsDisplay(e)}
+          onClick={(e) => handleDisplay(e)}
         >
           X
         </button>
