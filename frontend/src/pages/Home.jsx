@@ -341,14 +341,11 @@ export default function Home() {
             </div>
           ) : null}
           {displayRecipe === true ? (
-            // <div className="cocktail-display">
-            //   <h2>Cocktails recipe</h2>
             <CocktailCard
               handleCocktailsDisplay={handleCocktailsDisplay}
               id={selectedId}
             />
-          ) : // </div>
-          null}
+          ) : null}
         </div>
       </main>
     </div>
