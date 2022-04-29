@@ -5,6 +5,15 @@ import ResultCocktails from "@components/ResultCocktails";
 
 export default function AlcoholCocktail() {
   const [alcoholCocktail, setAlcoholCocktail] = useState([]);
+  const [hardDisplay, setHardDisplay] = useState(null);
+
+  const setDisplay = () => {
+    if (hardDisplay === null) {
+      setHardDisplay(true);
+    } else {
+      setHardDisplay(null);
+    }
+  };
 
   useEffect(() => {
     axios
@@ -15,12 +24,22 @@ export default function AlcoholCocktail() {
 
   return (
     <div className="show-cocktails">
-      <h2>Alcoholic Cocktails</h2>
-      <div className="scroller">
-        {alcoholCocktail.map((cocktail) => (
-          <ResultCocktails key={cocktail.idDrink} cocktail={cocktail} />
-        ))}
-      </div>
+      <button
+        className="ingredientButton"
+        type="button"
+        onClick={() => setDisplay()}
+        onKeyDown={() => setDisplay()}
+      >
+        <h2>Alcoholic Cocktails</h2>
+        {hardDisplay === null ? <p>Click to expand</p> : <p>Click to close</p>}
+      </button>
+      {hardDisplay === true ? (
+        <div className="scroller">
+          {alcoholCocktail.map((cocktail) => (
+            <ResultCocktails key={cocktail.idDrink} cocktail={cocktail} />
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 }

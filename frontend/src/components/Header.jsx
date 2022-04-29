@@ -13,6 +13,9 @@ export default function Header() {
 
   return (
     <header>
+      <button type="button" id="loginButton">
+        Login
+      </button>
       <div className="container">
         <nav id="navbar">
           <div className="logo">

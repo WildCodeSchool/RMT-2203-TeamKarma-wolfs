@@ -22,6 +22,7 @@ export default function Home() {
   const [cocktailResults, setCocktailResults] = useState(false);
   const [displayRecipe, setDisplayRecipe] = useState(false);
   const [selectedId, setSelectedId] = useState("");
+  const buttonDiv = document.querySelector("#resultsButton");
 
   const handleIngredientSelect = (e, ingredientName) => {
     if (e.target.parentElement.parentElement.classList.contains("selected")) {
@@ -218,6 +219,15 @@ export default function Home() {
       handleCocktailResults();
     }
   };
+
+  const counterDivToggle = () => {
+    if (displayRecipe === false) {
+      buttonDiv.style.display = "none";
+    } else {
+      buttonDiv.style.display = "flex";
+    }
+  };
+
   const toggleSearchResults = (e) => {
     const divIngredients = document.querySelector(".ingredients-list");
     if (displayRecipe !== true) {
@@ -262,6 +272,7 @@ export default function Home() {
               <button
                 className="select-button"
                 type="button"
+                // onClick={() => counterDivToggle()}
                 onClick={(e) => toggleSearchResults(e)}
                 value="search"
               >
@@ -336,13 +347,18 @@ export default function Home() {
                   image={elem.strDrinkThumb}
                   handleDisplay={handleDisplay}
                   displayRecipe={displayRecipe}
+                  counterDivToggle={counterDivToggle}
                 />
               ))}
             </div>
           ) : null}
           {displayRecipe === true ? (
             <div className="container">
-              <CocktailCard handleDisplay={handleDisplay} id={selectedId} />
+              <CocktailCard
+                handleDisplay={handleDisplay}
+                counterDivToggle={counterDivToggle}
+                id={selectedId}
+              />
             </div>
           ) : null}
         </div>

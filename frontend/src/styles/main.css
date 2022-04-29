@@ -255,3 +255,7 @@
 #resultsButton button {
   margin: auto;
 }
+
+.comingSoon {
+  color: gray;
+}
