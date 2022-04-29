@@ -341,10 +341,12 @@ export default function Home() {
             </div>
           ) : null}
           {displayRecipe === true ? (
-            <CocktailCard
-              handleCocktailsDisplay={handleCocktailsDisplay}
-              id={selectedId}
-            />
+            <div className="container">
+              <CocktailCard
+                handleCocktailsDisplay={handleCocktailsDisplay}
+                id={selectedId}
+              />
+            </div>
           ) : null}
         </div>
       </main>

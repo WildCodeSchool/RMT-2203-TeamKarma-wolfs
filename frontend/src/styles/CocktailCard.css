@@ -1,11 +1,11 @@
 /* STRUCTURE */
 .card-box {
   display: flex;
-  margin: 0 auto !important;
+  margin: 0 auto;
   flex-direction: column;
   margin: 40px auto;
   padding: 40px;
-  width: 100%;
+  width: 50%;
   font-family: "poppins", sans-serif;
   background-color: #141414;
   border-radius: 5px;
@@ -49,7 +49,7 @@
 .random-card .card-box {
   display: flex;
   flex-direction: column;
-  margin: 10px auto 70px !important;
+  margin: 10px auto 70px;
   padding: 40px;
   width: 50%;
   font-family: "poppins", sans-serif;
