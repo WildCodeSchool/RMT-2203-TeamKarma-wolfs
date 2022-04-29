@@ -32,6 +32,18 @@ export default function IngredientSelection({ ingredientSelect }) {
       }`,
     });
   }
+  const ingredientImg = document.querySelectorAll(".ingredient-box img");
+  for (let j = 0; j < 3; j += 1) {
+    if (typeof ingredientImg[j] !== "undefined") {
+      if (ingredientSelectFix[j] === "question mark") {
+        ingredientImg[j].style.height = "55%";
+        ingredientImg[j].style.width = "55%";
+      } else {
+        ingredientImg[j].style.height = "80%";
+        ingredientImg[j].style.width = "80%";
+      }
+    }
+  }
 
   return (
     <>

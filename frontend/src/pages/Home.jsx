@@ -1,7 +1,9 @@
 import "../styles/main.css";
 import IngredientCard from "@components/IngredientCard";
 import IngredientSelection from "@components/IngredientSelection";
+import ResultsCounter from "@components/ResultsCounter";
 import ResultsCards from "@components/ResultsCards";
+import CocktailCard from "@components/CocktailCard";
 import alcoholList from "@assets/alcohol.json";
 import fruitsList from "@assets/fruits.json";
 import softList from "@assets/soft.json";
@@ -17,6 +19,9 @@ export default function Home() {
   const [results1, setResults1] = useState([]);
   const [results2, setResults2] = useState([]);
   const [results3, setResults3] = useState([]);
+  const [cocktailResults, setCocktailResults] = useState(false);
+  const [displayRecipe, setDisplayRecipe] = useState(false);
+  const [selectedId, setSelectedId] = useState("");
 
   const handleIngredientSelect = (e, ingredientName) => {
     if (e.target.parentElement.parentElement.classList.contains("selected")) {
@@ -81,6 +86,7 @@ export default function Home() {
     },
   ];
   const [filteredResults, setFilteredResults] = useState(sampleCall.drinks);
+  const [displayEasterEgg, setDisplayEsterEgg] = useState(true);
 
   useEffect(() => {
     setFirstIngredient(ingredientSelect[0]);
@@ -171,6 +177,7 @@ export default function Home() {
         displayResults.push(results1[idToAdd]);
       }
       setFilteredResults(displayResults);
+      setDisplayEsterEgg(false);
     } else if (
       typeof results1 !== "undefined" &&
       typeof results2 !== "undefined"
@@ -190,30 +197,54 @@ export default function Home() {
         displayResults.push(results1[idToAdd]);
       }
       setFilteredResults(displayResults);
+      setDisplayEsterEgg(false);
     } else if (typeof results1 !== "undefined") {
       setFilteredResults(results1);
+      setDisplayEsterEgg(false);
     } else {
       setFilteredResults(easterEgg);
+      setDisplayEsterEgg(true);
     }
   }
-
-  const toggleSearchResults = (e) => {
-    const divIngredients = document.querySelector(".ingredients-list");
-    const divResults = document.querySelector(".search-results");
-    if (e.target.value === "search") {
-      divIngredients.style.display = "none";
-      divResults.style.display = "flex";
-      e.target.value = "reset";
-      e.target.textContent = "Reset";
-      searchCocktails();
-      // Lancer call API
-    } else if (e.target.value === "reset") {
-      divIngredients.style.display = "block";
-      divResults.style.display = "none";
-      e.target.value = "search";
-      e.target.textContent = "Search";
+  const handleCocktailResults = () => {
+    setCocktailResults(!cocktailResults);
+  };
+  const handleDisplay = (e) => {
+    setDisplayRecipe(!displayRecipe);
+    if (e.target.parentElement.id) {
+      setSelectedId(e.target.parentElement.id);
+      handleCocktailResults();
+    } else {
+      handleCocktailResults();
     }
   };
+  const toggleSearchResults = (e) => {
+    const divIngredients = document.querySelector(".ingredients-list");
+    if (displayRecipe !== true) {
+      if (e.target.value === "search") {
+        divIngredients.style.display = "none";
+        e.target.value = "reset";
+        e.target.textContent = "Reset";
+        searchCocktails();
+        handleCocktailResults();
+      } else if (e.target.value === "reset") {
+        divIngredients.style.display = "block";
+        e.target.value = "search";
+        e.target.textContent = "Search";
+        handleCocktailResults();
+      }
+    }
+  };
+
+  useEffect(() => {
+    searchCocktails();
+  }, [results1]);
+  useEffect(() => {
+    searchCocktails();
+  }, [results2]);
+  useEffect(() => {
+    searchCocktails();
+  }, [results3]);
 
   return (
     <div>
@@ -223,16 +254,21 @@ export default function Home() {
             <div className="ingredients-box">
               <IngredientSelection ingredientSelect={ingredientSelect} />
             </div>
-            <button
-              className="select-button"
-              type="button"
-              onClick={(e) => toggleSearchResults(e)}
-              value="search"
-            >
-              Select
-            </button>
+            <div id="resultsButton">
+              <ResultsCounter
+                results={filteredResults.length}
+                easterEgg={displayEasterEgg}
+              />
+              <button
+                className="select-button"
+                type="button"
+                onClick={(e) => toggleSearchResults(e)}
+                value="search"
+              >
+                Search
+              </button>
+            </div>
           </div>
-
           <div className="ingredients-list">
             <div className="full-box">
               <h2>Fruits</h2>
@@ -289,17 +325,26 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="search-results">
-            <h2>Cocktails results</h2>
-            {filteredResults.map((elem) => (
-              <ResultsCards
-                key={elem.idDrink}
-                id={elem.idDrink}
-                name={elem.strDrink}
-                image={elem.strDrinkThumb}
-              />
-            ))}
-          </div>
+          {cocktailResults === true ? (
+            <div className="search-results">
+              <h2>Cocktails results</h2>
+              {filteredResults.map((elem) => (
+                <ResultsCards
+                  key={elem.idDrink}
+                  id={elem.idDrink}
+                  name={elem.strDrink}
+                  image={elem.strDrinkThumb}
+                  handleDisplay={handleDisplay}
+                  displayRecipe={displayRecipe}
+                />
+              ))}
+            </div>
+          ) : null}
+          {displayRecipe === true ? (
+            <div className="container">
+              <CocktailCard handleDisplay={handleDisplay} id={selectedId} />
+            </div>
+          ) : null}
         </div>
       </main>
     </div>
