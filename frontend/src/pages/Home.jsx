@@ -1,14 +1,15 @@
 import "../styles/main.css";
 import IngredientCard from "@components/IngredientCard";
 import IngredientSelection from "@components/IngredientSelection";
+import ResultsCounter from "@components/ResultsCounter";
 import ResultsCards from "@components/ResultsCards";
+import CocktailCard from "@components/CocktailCard";
 import alcoholList from "@assets/alcohol.json";
 import fruitsList from "@assets/fruits.json";
 import softList from "@assets/soft.json";
 import othersList from "@assets/others.json";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import CocktailCard from "@components/CocktailCard";
 
 export default function Home() {
   const [ingredientSelect, setIngredientSelect] = useState([]);
@@ -85,6 +86,7 @@ export default function Home() {
     },
   ];
   const [filteredResults, setFilteredResults] = useState(sampleCall.drinks);
+  const [displayEasterEgg, setDisplayEsterEgg] = useState(true);
 
   useEffect(() => {
     setFirstIngredient(ingredientSelect[0]);
@@ -175,6 +177,7 @@ export default function Home() {
         displayResults.push(results1[idToAdd]);
       }
       setFilteredResults(displayResults);
+      setDisplayEsterEgg(false);
     } else if (
       typeof results1 !== "undefined" &&
       typeof results2 !== "undefined"
@@ -194,13 +197,15 @@ export default function Home() {
         displayResults.push(results1[idToAdd]);
       }
       setFilteredResults(displayResults);
+      setDisplayEsterEgg(false);
     } else if (typeof results1 !== "undefined") {
       setFilteredResults(results1);
+      setDisplayEsterEgg(false);
     } else {
       setFilteredResults(easterEgg);
+      setDisplayEsterEgg(true);
     }
   }
-
   const handleCocktailResults = () => {
     setCocktailResults(!cocktailResults);
   };
@@ -213,22 +218,33 @@ export default function Home() {
       handleCocktailResults();
     }
   };
-
   const toggleSearchResults = (e) => {
     const divIngredients = document.querySelector(".ingredients-list");
-    if (e.target.value === "search") {
-      divIngredients.style.display = "none";
-      e.target.value = "reset";
-      e.target.textContent = "Reset";
-      searchCocktails();
-      handleCocktailResults();
-    } else if (e.target.value === "reset") {
-      divIngredients.style.display = "block";
-      e.target.value = "search";
-      e.target.textContent = "Search";
-      handleCocktailResults();
+    if (displayRecipe !== true) {
+      if (e.target.value === "search") {
+        divIngredients.style.display = "none";
+        e.target.value = "reset";
+        e.target.textContent = "Reset";
+        searchCocktails();
+        handleCocktailResults();
+      } else if (e.target.value === "reset") {
+        divIngredients.style.display = "block";
+        e.target.value = "search";
+        e.target.textContent = "Search";
+        handleCocktailResults();
+      }
     }
   };
+
+  useEffect(() => {
+    searchCocktails();
+  }, [results1]);
+  useEffect(() => {
+    searchCocktails();
+  }, [results2]);
+  useEffect(() => {
+    searchCocktails();
+  }, [results3]);
 
   return (
     <div>
@@ -238,16 +254,21 @@ export default function Home() {
             <div className="ingredients-box">
               <IngredientSelection ingredientSelect={ingredientSelect} />
             </div>
-            <button
-              className="select-button"
-              type="button"
-              onClick={(e) => toggleSearchResults(e)}
-              value="search"
-            >
-              Select
-            </button>
+            <div id="resultsButton">
+              <ResultsCounter
+                results={filteredResults.length}
+                easterEgg={displayEasterEgg}
+              />
+              <button
+                className="select-button"
+                type="button"
+                onClick={(e) => toggleSearchResults(e)}
+                value="search"
+              >
+                Search
+              </button>
+            </div>
           </div>
-
           <div className="ingredients-list">
             <div className="full-box">
               <h2>Fruits</h2>
@@ -320,8 +341,7 @@ export default function Home() {
             </div>
           ) : null}
           {displayRecipe === true ? (
-            <div className="cocktail-display">
-              <h2>Cocktails recipe</h2>
+            <div className="container">
               <CocktailCard handleDisplay={handleDisplay} id={selectedId} />
             </div>
           ) : null}
