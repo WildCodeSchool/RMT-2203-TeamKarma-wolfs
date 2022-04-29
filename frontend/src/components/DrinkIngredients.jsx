@@ -5,11 +5,19 @@ export default function DrinkIngredient({ drink }) {
       drink[`strIngredient${i}`] !== null &&
       drink[`strIngredient${i}`] !== ""
     ) {
-      ingredients.push({
-        id: `${i}`,
-        ingredientName: `${drink[`strIngredient${i}`]}`,
-        ingredientMeasure: `${drink[`strMeasure${i}`]}`,
-      });
+      if (drink[`strMeasure${i}`] !== null) {
+        ingredients.push({
+          id: `${i}`,
+          ingredientName: `${drink[`strIngredient${i}`]}`,
+          ingredientMeasure: `(${drink[`strMeasure${i}`]})`,
+        });
+      } else {
+        ingredients.push({
+          id: `${i}`,
+          ingredientName: `${drink[`strIngredient${i}`]}`,
+          ingredientMeasure: ``,
+        });
+      }
     }
   }
 
@@ -17,11 +25,9 @@ export default function DrinkIngredient({ drink }) {
     <>
       {ingredients.map((ingredient) => (
         <li key={ingredient.id}>
-          {ingredient.ingredientName} ({ingredient.ingredientMeasure})
+          {ingredient.ingredientName} {ingredient.ingredientMeasure}
         </li>
       ))}
     </>
   );
 }
-// {ingredient.ingredient}
-// { ingredient: drink[`strIngredient${i}`], id: i });
