@@ -9,6 +9,7 @@ import softList from "@assets/soft.json";
 import othersList from "@assets/others.json";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import CocktailCard from "@components/CocktailCard";
 
 export default function Home() {
   const [ingredientSelect, setIngredientSelect] = useState([]);
@@ -18,6 +19,9 @@ export default function Home() {
   const [results1, setResults1] = useState([]);
   const [results2, setResults2] = useState([]);
   const [results3, setResults3] = useState([]);
+  const [cocktailResults, setCocktailResults] = useState(false);
+  const [displayRecipe, setDisplayRecipe] = useState(false);
+  const [selectedId, setSelectedId] = useState("");
 
   const handleIngredientSelect = (e, ingredientName) => {
     if (e.target.parentElement.parentElement.classList.contains("selected")) {
@@ -203,21 +207,32 @@ export default function Home() {
     }
   }
 
+  const handleCocktailResults = () => {
+    setCocktailResults(!cocktailResults);
+  };
+  const handleDisplay = (e) => {
+    setDisplayRecipe(!displayRecipe);
+    if (e.target.parentElement.id) {
+      setSelectedId(e.target.parentElement.id);
+      handleCocktailResults();
+    } else {
+      handleCocktailResults();
+    }
+  };
+
   const toggleSearchResults = (e) => {
     const divIngredients = document.querySelector(".ingredients-list");
-    const divResults = document.querySelector(".search-results");
     if (e.target.value === "search") {
       divIngredients.style.display = "none";
-      divResults.style.display = "flex";
       e.target.value = "reset";
       e.target.textContent = "Reset";
       searchCocktails();
-      // Lancer call API
+      handleCocktailResults();
     } else if (e.target.value === "reset") {
       divIngredients.style.display = "block";
-      divResults.style.display = "none";
       e.target.value = "search";
       e.target.textContent = "Search";
+      handleCocktailResults();
     }
   };
 
@@ -311,17 +326,27 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="search-results">
-            <h2>Cocktails results</h2>
-            {filteredResults.map((elem) => (
-              <ResultsCards
-                key={elem.idDrink}
-                id={elem.idDrink}
-                name={elem.strDrink}
-                image={elem.strDrinkThumb}
-              />
-            ))}
-          </div>
+          {cocktailResults === true ? (
+            <div className="search-results">
+              <h2>Cocktails results</h2>
+              {filteredResults.map((elem) => (
+                <ResultsCards
+                  key={elem.idDrink}
+                  id={elem.idDrink}
+                  name={elem.strDrink}
+                  image={elem.strDrinkThumb}
+                  handleDisplay={handleDisplay}
+                  displayRecipe={displayRecipe}
+                />
+              ))}
+            </div>
+          ) : null}
+          {displayRecipe === true ? (
+            <div className="cocktail-display">
+              <h2>Cocktails recipe</h2>
+              <CocktailCard handleDisplay={handleDisplay} id={selectedId} />
+            </div>
+          ) : null}
         </div>
       </main>
     </div>
