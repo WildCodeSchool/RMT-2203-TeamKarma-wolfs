@@ -29,6 +29,14 @@
   top: 0;
   right: 0;
   cursor: pointer;
+  transition-timing-function: linear;
+  transition-duration: 0.3s;
+}
+
+#closeRecipe:hover {
+  transform: rotate(180deg) scale(1.5);
+  transition-timing-function: linear;
+  transition-duration: 0.3s;
 }
 
 /* TITLE */

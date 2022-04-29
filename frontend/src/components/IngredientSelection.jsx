@@ -31,6 +31,14 @@ export default function IngredientSelection({ ingredientSelect }) {
           : `https://www.thecocktaildb.com/images/ingredients/${ingredientSelectFix[i]}-small.png`
       }`,
     });
+    const ingredientImg = document.querySelectorAll(".ingredient-box img");
+    for (let j = 0; j < 3; j += 1) {
+      if (ingredientSelectFix[j] === "question mark") {
+        ingredientImg[j].style.height = "55%";
+      } else {
+        ingredientImg[j].style.height = "80%";
+      }
+    }
   }
 
   return (

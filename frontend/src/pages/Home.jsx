@@ -3,13 +3,13 @@ import IngredientCard from "@components/IngredientCard";
 import IngredientSelection from "@components/IngredientSelection";
 import ResultsCounter from "@components/ResultsCounter";
 import ResultsCards from "@components/ResultsCards";
+import CocktailCard from "@components/CocktailCard";
 import alcoholList from "@assets/alcohol.json";
 import fruitsList from "@assets/fruits.json";
 import softList from "@assets/soft.json";
 import othersList from "@assets/others.json";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import CocktailCard from "@components/CocktailCard";
 
 export default function Home() {
   const [ingredientSelect, setIngredientSelect] = useState([]);
@@ -206,11 +206,10 @@ export default function Home() {
       setDisplayEsterEgg(true);
     }
   }
-
   const handleCocktailResults = () => {
     setCocktailResults(!cocktailResults);
   };
-  const handleDisplay = (e) => {
+  const handleCocktailsDisplay = (e) => {
     setDisplayRecipe(!displayRecipe);
     if (e.target.parentElement.id) {
       setSelectedId(e.target.parentElement.id);
@@ -219,20 +218,21 @@ export default function Home() {
       handleCocktailResults();
     }
   };
-
   const toggleSearchResults = (e) => {
     const divIngredients = document.querySelector(".ingredients-list");
-    if (e.target.value === "search") {
-      divIngredients.style.display = "none";
-      e.target.value = "reset";
-      e.target.textContent = "Reset";
-      searchCocktails();
-      handleCocktailResults();
-    } else if (e.target.value === "reset") {
-      divIngredients.style.display = "block";
-      e.target.value = "search";
-      e.target.textContent = "Search";
-      handleCocktailResults();
+    if (displayRecipe !== true) {
+      if (e.target.value === "search") {
+        divIngredients.style.display = "none";
+        e.target.value = "reset";
+        e.target.textContent = "Reset";
+        searchCocktails();
+        handleCocktailResults();
+      } else if (e.target.value === "reset") {
+        divIngredients.style.display = "block";
+        e.target.value = "search";
+        e.target.textContent = "Search";
+        handleCocktailResults();
+      }
     }
   };
 
@@ -269,7 +269,6 @@ export default function Home() {
               </button>
             </div>
           </div>
-
           <div className="ingredients-list">
             <div className="full-box">
               <h2>Fruits</h2>
@@ -335,18 +334,21 @@ export default function Home() {
                   id={elem.idDrink}
                   name={elem.strDrink}
                   image={elem.strDrinkThumb}
-                  handleDisplay={handleDisplay}
+                  handleCocktailsDisplay={handleCocktailsDisplay}
                   displayRecipe={displayRecipe}
                 />
               ))}
             </div>
           ) : null}
           {displayRecipe === true ? (
-            <div className="cocktail-display">
-              <h2>Cocktails recipe</h2>
-              <CocktailCard handleDisplay={handleDisplay} id={selectedId} />
-            </div>
-          ) : null}
+            // <div className="cocktail-display">
+            //   <h2>Cocktails recipe</h2>
+            <CocktailCard
+              handleCocktailsDisplay={handleCocktailsDisplay}
+              id={selectedId}
+            />
+          ) : // </div>
+          null}
         </div>
       </main>
     </div>
