@@ -272,7 +272,6 @@ export default function Home() {
               <button
                 className="select-button"
                 type="button"
-                // onClick={() => counterDivToggle()}
                 onClick={(e) => toggleSearchResults(e)}
                 value="search"
               >
