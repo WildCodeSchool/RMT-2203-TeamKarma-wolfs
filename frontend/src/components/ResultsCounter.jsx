@@ -6,6 +6,8 @@ export default function ResultsCounter({
   easterEgg,
   toggleSearchResults,
   firstIngredient,
+  buttonState,
+  setButtonState,
 }) {
   let counter = 0;
   if (easterEgg === true) {
@@ -20,9 +22,7 @@ export default function ResultsCounter({
       firstIngredient !== undefined &&
       divIngredients.style.display === "none"
     ) {
-      const searchBtn = document.querySelector(".select-button");
-      searchBtn.value = "reset";
-      searchBtn.textContent = "Reset";
+      setButtonState("Reset");
     }
   }, []);
 
@@ -32,10 +32,10 @@ export default function ResultsCounter({
       <button
         className="select-button"
         type="button"
-        onClick={(e) => toggleSearchResults(e)}
+        onClick={() => toggleSearchResults()}
         value="search"
       >
-        Search
+        {buttonState === "Search" ? "Search" : "Reset"}
       </button>
     </div>
   );
