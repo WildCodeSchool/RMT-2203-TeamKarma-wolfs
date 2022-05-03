@@ -6,13 +6,16 @@ import Logo from "@assets/img/svg/logo.svg";
 export default function Header() {
   const getActiveLinkStyle = ({ isActive }) => {
     if (isActive) {
-      return { color: "#1AEA7E", borderTop: "3px solid #1AEA7E" };
+      return {
+        color: "var(--border-color)",
+        borderTop: "3px solid var(--border-color)",
+      };
     }
     return null;
   };
 
   return (
-    <header>
+    <header id="top">
       <button type="button" id="loginButton">
         Login
       </button>

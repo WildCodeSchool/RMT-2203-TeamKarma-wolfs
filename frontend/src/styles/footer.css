@@ -2,7 +2,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(146, 146, 146, 0.185);
+  background-color: var(--background-header-footer);
   height: 5rem;
 }
 
@@ -14,5 +14,5 @@ footer p {
 }
 
 footer a {
-  color: #f0e68c;
+  color: var( --secondary-color);
 }

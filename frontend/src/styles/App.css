@@ -17,62 +17,46 @@
   font-display: swap;
 }
 
+/* BODY */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #101010;
+  background-size: 20px 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* VARIABLES */
+:root {
+  --background-header-footer: rgba(146, 146, 146, 0.185);
+  --title-color: #7731b0;
+  --main-color: #265a5d;
+  --secondary-color: #f0e68c;
+  --text-color: #e0e0e0;
+  --primary-bg: rgba(83, 83, 83, 0.698);
+  --border-color: #1aea7f;
+  --selectBtn: #969177;
+  --black: #000000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-button {
-  font-size: calc(10px + 2vmin);
-}
-
-/* reset.css */
+/* RESET.CSS */
 html,
 body,
 div,
@@ -161,6 +145,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -192,48 +177,4 @@ q:before,
 q:after {
   content: "";
   content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* variables */
-:root {
-  --title-color: #7731b0;
-  --main-color: #265a5d;
-  --secondary-color: #d4af37;
-  --text-color: #e0e0e0;
-  --primary-bg: rgba(83, 83, 83, 0.698);
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(
-      #1d1d1d 25%,
-      #1a1a1a 25%,
-      #1a1a1a 50%,
-      transparent 50%,
-      transparent 75%,
-      #242424 75%,
-      #242424
-    );
-  background-color: #131313;
-  background-size: 20px 20px;
-}
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
 }

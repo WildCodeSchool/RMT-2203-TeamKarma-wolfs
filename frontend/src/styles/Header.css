@@ -1,6 +1,7 @@
 /* BACKGROUND */
 header {
-  background-color: rgba(146, 146, 146, 0.185);
+  background-color: var(--background-header-footer)!important;
+  box-shadow: 0px 6px 13px -6px #1aea7f8e;
 }
 header #navbar {
   display: flex;
@@ -40,7 +41,7 @@ header h1 span {
 header .menu ul {
   display: flex;
   justify-content: space-around;
-  border-top: 3px solid #1aea7e;
+  border-top: 3px solid var(--border-color);
   padding: 0px 85px;
 }
 header .menu ul li {
@@ -55,11 +56,12 @@ header .menu ul li a {
   text-decoration: none;
   padding: 13px 10px;
   color: #f0e68c;
+  line-height: 1.5rem;
   text-align: center;
   display: block;
 }
 header .menu ul li a:hover {
-  border-top: 3px solid #1aea7e;
+  border-top: 3px solid var(--border-color);
   transition: 0.2s;
 }
 

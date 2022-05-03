@@ -1,18 +1,15 @@
-/* variables */
-:root {
-  --title-color: #7731b0;
-  --main-color: #265a5d;
-  --secondary-color: #d4af37;
-  --text-color: #e0e0e0;
-  --primary-bg: rgba(83, 83, 83, 0.698);
-  --selectBtn: #969177;
-  --black: #000000;
+.slogan p {
+  font-size: 1.7rem;
+  font-family: "Poppins", "sans-serif";
+  color: var(--title-color);
+  margin-top: 40px;
 }
 
 .ingredients-box {
   display: flex;
   justify-content: center;
   margin-bottom: 15px;
+  margin-top:40px;
 }
 
 .ingredient-box {
@@ -216,7 +213,7 @@
   width: 100%;
   font-size: 2rem;
   color: var(--secondary-color);
-  background-color: #265a5d;
+  background-color: var(--main-color);
   padding: 6px 20px;
   border: 1px solid var(--secondary-color);
   border-radius: 5px 5px 0 0;
@@ -249,7 +246,12 @@
 #resultsButton p {
   color: var(--secondary-color);
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  background-color: var(--main-color);
+  width: 400px;
+  height: 35px;
+  margin-bottom: 30px;
+  padding-top: 5px;
+  border-radius: 3px;
 }
 
 #resultsButton button {
@@ -258,4 +260,23 @@
 
 .comingSoon {
   color: gray;
+}
+
+.back-to-top-box {
+  position: fixed;
+  bottom: 55px;
+  right: 10%;
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+
+.back-to-top {
+  display: inline-block;
+  background-image: url(../assets/img/svg/back-to-top.svg);
+  background-position: cover;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 50px;
+  margin-left: auto;
 }

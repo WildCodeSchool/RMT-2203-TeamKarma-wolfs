@@ -1,4 +1,4 @@
-import "../styles/main.css";
+import "@styles/main.css";
 import IngredientCard from "@components/IngredientCard";
 import IngredientSelection from "@components/IngredientSelection";
 import ResultsCounter from "@components/ResultsCounter";
