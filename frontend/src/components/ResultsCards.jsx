@@ -1,12 +1,17 @@
 import "../styles/main.css";
+import { useEffect } from "react";
 
 export default function ResultsCards({
   name,
   image,
   id,
   handleDisplay,
-  counterDivToggle,
+  setSearchButtonDisplay,
 }) {
+  useEffect(() => {
+    setSearchButtonDisplay(true);
+  }, []);
+
   return (
     <div id={`${id}`} className="resultBox">
       <img src={image} alt={name} value={id} />
@@ -17,7 +22,6 @@ export default function ResultsCards({
         value="recipeHidden"
         onClick={(e) => {
           handleDisplay(e);
-          counterDivToggle();
         }}
       >
         See recipe

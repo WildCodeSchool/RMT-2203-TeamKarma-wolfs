@@ -4,7 +4,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import DrinkIngredients from "./DrinkIngredients";
 
-export default function CocktailCard({ handleDisplay, counterDivToggle, id }) {
+export default function CocktailCard({
+  handleDisplay,
+  id,
+  setSearchButtonDisplay,
+}) {
   const [card, setCard] = useState([]);
 
   useEffect(() => {
@@ -18,6 +22,7 @@ export default function CocktailCard({ handleDisplay, counterDivToggle, id }) {
       .then((data) => {
         setCard(data.drinks[0]);
       });
+    setSearchButtonDisplay(false);
 
     return function cleanup() {
       controller.abort();
@@ -32,7 +37,6 @@ export default function CocktailCard({ handleDisplay, counterDivToggle, id }) {
           id="closeRecipe"
           onClick={(e) => {
             handleDisplay(e);
-            counterDivToggle();
           }}
         >
           X

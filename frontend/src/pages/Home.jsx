@@ -22,7 +22,7 @@ export default function Home() {
   const [cocktailResults, setCocktailResults] = useState(false);
   const [displayRecipe, setDisplayRecipe] = useState(false);
   const [selectedId, setSelectedId] = useState("");
-  const buttonDiv = document.querySelector("#resultsButton");
+  const [searchButtonDisplay, setSearchButtonDisplay] = useState(true);
 
   const handleIngredientSelect = (e, ingredientName) => {
     if (e.target.parentElement.parentElement.classList.contains("selected")) {
@@ -220,14 +220,6 @@ export default function Home() {
     }
   };
 
-  const counterDivToggle = () => {
-    if (displayRecipe === false) {
-      buttonDiv.style.display = "none";
-    } else {
-      buttonDiv.style.display = "flex";
-    }
-  };
-
   const toggleSearchResults = (e) => {
     const divIngredients = document.querySelector(".ingredients-list");
     if (displayRecipe !== true) {
@@ -264,21 +256,14 @@ export default function Home() {
             <div className="ingredients-box">
               <IngredientSelection ingredientSelect={ingredientSelect} />
             </div>
-            <div id="resultsButton">
+            {searchButtonDisplay === true ? (
               <ResultsCounter
                 results={filteredResults.length}
                 easterEgg={displayEasterEgg}
+                toggleSearchResults={toggleSearchResults}
+                firstIngredient={firstIngredient}
               />
-              <button
-                className="select-button"
-                type="button"
-                // onClick={() => counterDivToggle()}
-                onClick={(e) => toggleSearchResults(e)}
-                value="search"
-              >
-                Search
-              </button>
-            </div>
+            ) : null}
           </div>
           <div className="ingredients-list">
             <div className="full-box">
@@ -347,7 +332,7 @@ export default function Home() {
                   image={elem.strDrinkThumb}
                   handleDisplay={handleDisplay}
                   displayRecipe={displayRecipe}
-                  counterDivToggle={counterDivToggle}
+                  setSearchButtonDisplay={setSearchButtonDisplay}
                 />
               ))}
             </div>
@@ -356,7 +341,7 @@ export default function Home() {
             <div className="container">
               <CocktailCard
                 handleDisplay={handleDisplay}
-                counterDivToggle={counterDivToggle}
+                setSearchButtonDisplay={setSearchButtonDisplay}
                 id={selectedId}
               />
             </div>
