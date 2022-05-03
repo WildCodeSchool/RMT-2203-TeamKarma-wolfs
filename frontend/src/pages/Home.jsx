@@ -22,6 +22,8 @@ export default function Home() {
   const [cocktailResults, setCocktailResults] = useState(false);
   const [displayRecipe, setDisplayRecipe] = useState(false);
   const [selectedId, setSelectedId] = useState("");
+  const [searchButtonDisplay, setSearchButtonDisplay] = useState(true);
+  const [buttonState, setButtonState] = useState("Search");
 
   const handleIngredientSelect = (e, ingredientName) => {
     if (e.target.parentElement.parentElement.classList.contains("selected")) {
@@ -218,19 +220,18 @@ export default function Home() {
       handleCocktailResults();
     }
   };
-  const toggleSearchResults = (e) => {
+
+  const toggleSearchResults = () => {
     const divIngredients = document.querySelector(".ingredients-list");
     if (displayRecipe !== true) {
-      if (e.target.value === "search") {
+      if (buttonState === "Search") {
         divIngredients.style.display = "none";
-        e.target.value = "reset";
-        e.target.textContent = "Reset";
+        setButtonState("Reset");
         searchCocktails();
         handleCocktailResults();
-      } else if (e.target.value === "reset") {
+      } else if (buttonState === "Reset") {
         divIngredients.style.display = "block";
-        e.target.value = "search";
-        e.target.textContent = "Search";
+        setButtonState("Search");
         handleCocktailResults();
       }
     }
@@ -254,20 +255,16 @@ export default function Home() {
             <div className="ingredients-box">
               <IngredientSelection ingredientSelect={ingredientSelect} />
             </div>
-            <div id="resultsButton">
+            {searchButtonDisplay === true ? (
               <ResultsCounter
                 results={filteredResults.length}
                 easterEgg={displayEasterEgg}
+                toggleSearchResults={toggleSearchResults}
+                firstIngredient={firstIngredient}
+                buttonState={buttonState}
+                setButtonState={setButtonState}
               />
-              <button
-                className="select-button"
-                type="button"
-                onClick={(e) => toggleSearchResults(e)}
-                value="search"
-              >
-                Search
-              </button>
-            </div>
+            ) : null}
           </div>
           <div className="ingredients-list">
             <div className="full-box">
@@ -336,13 +333,18 @@ export default function Home() {
                   image={elem.strDrinkThumb}
                   handleDisplay={handleDisplay}
                   displayRecipe={displayRecipe}
+                  setSearchButtonDisplay={setSearchButtonDisplay}
                 />
               ))}
             </div>
           ) : null}
           {displayRecipe === true ? (
             <div className="container">
-              <CocktailCard handleDisplay={handleDisplay} id={selectedId} />
+              <CocktailCard
+                handleDisplay={handleDisplay}
+                setSearchButtonDisplay={setSearchButtonDisplay}
+                id={selectedId}
+              />
             </div>
           ) : null}
         </div>

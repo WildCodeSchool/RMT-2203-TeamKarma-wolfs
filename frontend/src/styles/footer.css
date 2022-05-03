@@ -1,4 +1,4 @@
-.footer {
+footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,6 +12,7 @@ footer p {
   font-size: 0.8rem;
   line-height: 1.5rem;
 }
-.footer a {
+
+footer a {
   color: #f0e68c;
 }
