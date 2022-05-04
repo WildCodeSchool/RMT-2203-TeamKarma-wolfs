@@ -4,11 +4,9 @@ import AlcoholCocktail from "@components/AlcoholicCocktail";
 
 export default function Cocktails() {
   return (
-    <div>
-      <div>
-        <AlcoholCocktail />
-        <SoftCocktails />
-      </div>
+    <div className="cocktails-type">
+      <AlcoholCocktail />
+      <SoftCocktails />
     </div>
   );
 }

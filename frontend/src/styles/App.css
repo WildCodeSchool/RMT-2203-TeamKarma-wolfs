@@ -27,12 +27,10 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #101010;
-  background-size: 20px 20px;
+  background-image: url(../assets/img/body-bg.jpg);
+  background-repeat: repeat;
+ 
 }
-
 .container {
   width: 100%;
   max-width: 1200px;
@@ -45,12 +43,14 @@ body {
 
 /* VARIABLES */
 :root {
-  --background-header-footer: rgba(146, 146, 146, 0.185);
+  /* --background-header-footer: rgba(146, 146, 146, 0.185); */
+  --background-header-footer: rgba(24, 24, 24, 0.521);
   --title-color: #7731b0;
   --main-color: #265a5d;
   --secondary-color: #f0e68c;
   --text-color: #e0e0e0;
   --primary-bg: rgba(83, 83, 83, 0.698);
+  --background-box:rgba(54, 54, 54, 0.55);
   --border-color: #1aea7f;
   --selectBtn: #969177;
   --black: #000000;

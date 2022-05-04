@@ -250,6 +250,9 @@ export default function Home() {
   return (
     <div>
       <main>
+        <div className="slogan">
+          <p>Choose your ingredients :</p>
+        </div>
         <div id="ingredients-finder">
           <div className="container">
             <div className="ingredients-box">

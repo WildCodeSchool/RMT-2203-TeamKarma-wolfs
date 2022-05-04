@@ -28,7 +28,6 @@ export default function ResultsCounter({
 
   return (
     <div id="resultsButton">
-      <p>Results : {counter}</p>
       <button
         className="select-button"
         type="button"
@@ -37,6 +36,7 @@ export default function ResultsCounter({
       >
         {buttonState === "Search" ? "Search" : "Reset"}
       </button>
+      <p>Cocktails: {counter}</p>
     </div>
   );
 }

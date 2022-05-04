@@ -1,3 +1,7 @@
+.cocktails-type {
+  min-height: calc(100vh - 375px);
+} 
+
 .show-cocktails {
   display: flex;
   justify-content: center;
@@ -5,8 +9,8 @@
   flex-wrap: wrap;
   width: 60%;
   max-width: 1200px;
-  background-color: var(--background-header-footer);
-  margin: 40px auto 80px;
+  background-color: var(--background-box);
+  margin: 50px auto 80px;
   border: 2px solid var(--border);
   border-radius: 6px;
 }
@@ -20,6 +24,7 @@
   padding: 6px 20px;
   border: 1px solid var(--secondary-color);
   border-radius: 5px 5px 0 0;
+  cursor: pointer;
 }
 
 .show-cocktails p {

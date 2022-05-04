@@ -6,9 +6,6 @@ import Cocktails from "@pages/Cocktails";
 export default function Main() {
   return (
     <div>
-      <div className="slogan">
-        <p>Choose your cocktail</p>
-      </div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/favorites" element={<Home />} />
