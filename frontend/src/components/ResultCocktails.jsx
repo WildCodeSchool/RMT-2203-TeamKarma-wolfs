@@ -4,14 +4,13 @@ export default function ResultCocktails({
   handleChoosen,
   cocktail,
   handleChange,
-  setAlcoholCocktail,
 }) {
   return (
     <div id={`${cocktail.idDrink}`} className="resultBox">
       <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
       <p>{cocktail.strDrink}</p>
       <button
-        className="clickButton"
+        className="recipeButton"
         type="button"
         onClick={() => {
           handleChoosen(cocktail);
@@ -23,6 +22,3 @@ export default function ResultCocktails({
     </div>
   );
 }
-
-//APP -> Cocktails -> alcool && soft -> ResultCocktail -> CocktailShow
-// faire une fonction qui au clique, va nous afficher CocktailShow

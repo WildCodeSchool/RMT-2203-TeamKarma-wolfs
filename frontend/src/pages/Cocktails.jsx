@@ -1,42 +1,53 @@
+import { useState } from "react";
 import SoftCocktails from "@components/SoftCocktails";
 import "../styles/cocktail.css";
 import AlcoholCocktail from "../components/AlcoholicCocktail";
 import CocktailShow from "../components/CocktailShow";
-import { useState } from "react";
 
-export default function Cocktails({ cocktail }) {
+export default function Cocktails() {
   const [cocktailResult, setCocktailResult] = useState(false);
   const [choosenCocktail, setChoosenCocktail] = useState("");
-  const [cocktailId, setCocktailId] = useState("");
+  const [buttonDisplay, setButtonDisplay] = useState(true);
 
-  function handleChange() {
+  const handleChange = () => {
     setCocktailResult(!cocktailResult);
-  }
-  function handleChoosen(e) {
+  };
+  const handleChoosen = (e) => {
     setChoosenCocktail(e);
-  }
+  };
+  const handleClick = () => {
+    setButtonDisplay(!buttonDisplay);
+  };
+
   return (
     <div>
-      <div>
-        <AlcoholCocktail
-          handleChange={handleChange}
-          handleChoosen={handleChoosen}
-          setCocktailId={setCocktailId}
-        />
-        <SoftCocktails
-          handleChange={handleChange}
-          handleChoosen={handleChoosen}
-        />
-      </div>
-      {cocktailResult ? (
+      {" "}
+      {cocktailResult === true ? (
         <div className="xx">
           <CocktailShow
+            setButtonDisplay={setButtonDisplay}
+            handleClick={handleClick}
+            buttonDisplay={buttonDisplay}
             cocktailResult={cocktailResult}
             cocktail={choosenCocktail}
-            id={cocktailId}
+            handleChange={handleChange}
           />
         </div>
       ) : null}{" "}
+      <div>
+        {buttonDisplay === true ? (
+          <div>
+            <AlcoholCocktail
+              handleChange={handleChange}
+              handleChoosen={handleChoosen}
+            />
+            <SoftCocktails
+              handleChange={handleChange}
+              handleChoosen={handleChoosen}
+            />
+          </div>
+        ) : null}
+      </div>
     </div>
   );
 }
