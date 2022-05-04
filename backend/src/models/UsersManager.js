@@ -10,6 +10,13 @@ class UsersManager extends AbstractManager {
     );
   }
 
+  selectOneName(id) {
+    return this.connection.query(
+      `select username from ${this.table} where id = ?`,
+      [id]
+    );
+  }
+
   findOneByEmail(userEmail) {
     return this.connection.query(
       `SELECT * from ${UsersManager.table} WHERE email = ?`,

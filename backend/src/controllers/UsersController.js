@@ -4,9 +4,9 @@ const jwt = require("jsonwebtoken");
 const models = require("../models");
 
 class UsersController {
-  static debug = (req, res) => {
+  static selectUser = (req, res) => {
     models.users
-      .findOneByEmail(req.body.email)
+      .selectOneName(req.body.id)
       .then(([rows]) => {
         res.send(rows);
       })
@@ -63,7 +63,7 @@ class UsersController {
                     { userId: user[0][0].id },
                     process.env.TOKEN_SECRET,
                     {
-                      expiresIn: "24h",
+                      expiresIn: "6h",
                     }
                   ),
                 });

@@ -259,3 +259,48 @@
 .comingSoon {
   color: gray;
 }
+
+.favNoLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 60%;
+  height: 200px;
+  background-color: rgba(146, 146, 146, 0.185);
+  margin: 80px auto;
+  border: 2px solid rgb(150, 145, 119);
+  border-radius: 6px;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
+
+.favLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 60%;
+  height: 200px;
+  background-color: rgba(146, 146, 146, 0.185);
+  margin: 80px auto;
+  border: 2px solid rgb(150, 145, 119);
+  border-radius: 6px;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
+
+.shopping {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 60%;
+  height: 200px;
+  background-color: rgba(146, 146, 146, 0.185);
+  margin: 80px auto;
+  border: 2px solid rgb(150, 145, 119);
+  border-radius: 6px;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
