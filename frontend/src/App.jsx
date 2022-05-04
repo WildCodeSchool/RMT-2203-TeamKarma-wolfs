@@ -3,7 +3,7 @@ import Header from "@components/Header";
 import Footer from "@components/Footer";
 import { useState } from "react";
 
-import "./styles/App.css";
+import "@styles/App.css";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);

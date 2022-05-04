@@ -1,3 +1,7 @@
+.cocktails-type {
+  min-height: calc(100vh - 435px);
+}
+
 .show-cocktails {
   display: flex;
   justify-content: center;
@@ -5,21 +9,22 @@
   flex-wrap: wrap;
   width: 60%;
   max-width: 1200px;
-  background-color: rgba(146, 146, 146, 0.185);
-  margin: 40px auto 80px;
-  border: 2px solid rgb(150, 145, 119);
+  background-color: var(--background-box);
+  margin: 50px auto 80px;
+  border: 2px solid var(--border);
   border-radius: 6px;
 }
 
-.show-cocktails button {
+.show-cocktails > button {
   width: 100%;
   font-size: 2rem;
   color: var(--secondary-color);
-  background-color: #265a5d;
+  background-color: var(--main-color);
   margin-bottom: 20px;
   padding: 6px 20px;
   border: 1px solid var(--secondary-color);
   border-radius: 5px 5px 0 0;
+  cursor: pointer;
 }
 
 .show-cocktails p {
@@ -44,14 +49,14 @@
 }
 
 .scroller::-webkit-scrollbar-track {
-  background: #265a5d; /* color of the tracking area */
+  background: var(--main-color); /* color of the tracking area */
   margin-top: -20px;
 }
 
 .scroller::-webkit-scrollbar-thumb {
-  background-color: #7731b0; /* color of the scroll thumb */
+  background-color: var(--title-color); /* color of the scroll thumb */
   border-radius: 10px; /* roundness of the scroll thumb */
-  border: 2px solid #d4af37; /* creates padding around scroll thumb */
+  border: 2px solid var(--shadow); /* creates padding around scroll thumb */
 }
 
 .resultBox {
@@ -59,10 +64,10 @@
   flex-direction: column;
   align-items: center;
   width: 25%;
-  background-color: #131313;
+  background-color: var(--background-card);
   padding: 20px;
   margin: 30px 30px;
-  border: 2px solid #265a5d;
+  border: 2px solid var(--main-color);
   border-radius: 5px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.801);
 }
@@ -76,7 +81,19 @@
 }
 
 .resultBox p {
-  font-family: sans-serif;
   font-size: 1.1rem;
   color: var(--text-color);
+}
+
+.recipeButton {
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  color: var(--black);
+  border: 2px solid var(--main-color);
+  background-color: var(--selectBtn);
+  margin-top: 10px;
+  padding: 3px 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
 }

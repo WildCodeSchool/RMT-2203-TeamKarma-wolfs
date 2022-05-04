@@ -1,4 +1,4 @@
-import "../styles/main.css";
+import "@styles/main.css";
 import IngredientCard from "@components/IngredientCard";
 import IngredientSelection from "@components/IngredientSelection";
 import ResultsCounter from "@components/ResultsCounter";
@@ -250,6 +250,9 @@ export default function Home() {
   return (
     <div>
       <main>
+        <div className="slogan">
+          <p>Choose your ingredients :</p>
+        </div>
         <div id="ingredients-finder">
           <div className="container">
             <div className="ingredients-box">
@@ -347,6 +350,16 @@ export default function Home() {
               />
             </div>
           ) : null}
+        </div>
+        <div className="back-to-top-box">
+          <a
+            href="#top"
+            className="back-to-top"
+            title="Back to top"
+            aria-label="Scroll to Top"
+          >
+            Up
+          </a>
         </div>
       </main>
     </div>

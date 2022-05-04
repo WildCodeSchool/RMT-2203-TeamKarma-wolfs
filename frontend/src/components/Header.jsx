@@ -85,13 +85,16 @@ export default function Header({
 
   const getActiveLinkStyle = ({ isActive }) => {
     if (isActive) {
-      return { color: "#1AEA7E", borderTop: "3px solid #1AEA7E" };
+      return {
+        color: "var(--border-color)",
+        borderTop: "3px solid var(--border-color)",
+      };
     }
     return null;
   };
 
   return (
-    <header className="header">
+    <header className="header" id="top">
       <div>
         <ul className="loginMenu">
           <li>

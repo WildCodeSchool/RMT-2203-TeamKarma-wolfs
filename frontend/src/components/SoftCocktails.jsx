@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import "../styles/App.css";
+import "@styles/App.css";
 import ResultCocktails from "@components/ResultCocktails";
 
-export default function SoftCocktails() {
+export default function SoftCocktails({ handleChange, handleChoosen }) {
   const [softCocktail, setSoftCocktail] = useState([]);
   const [softDisplay, setSoftDisplay] = useState(null);
 
@@ -36,7 +36,12 @@ export default function SoftCocktails() {
       {softDisplay === true ? (
         <div className="scroller">
           {softCocktail.map((cocktail) => (
-            <ResultCocktails key={cocktail.idDrink} cocktail={cocktail} />
+            <ResultCocktails
+              key={cocktail.idDrink}
+              cocktail={cocktail}
+              handleChange={handleChange}
+              handleChoosen={handleChoosen}
+            />
           ))}
         </div>
       ) : null}
