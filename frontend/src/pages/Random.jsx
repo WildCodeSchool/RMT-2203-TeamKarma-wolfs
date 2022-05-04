@@ -1,4 +1,4 @@
-import "../styles/CocktailCard.css";
+import "@styles/CocktailCard.css";
 import DrinkIngredients from "@components/DrinkIngredients";
 import { useState, useEffect } from "react";
 import axios from "axios";

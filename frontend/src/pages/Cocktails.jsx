@@ -1,8 +1,8 @@
 import { useState } from "react";
 import SoftCocktails from "@components/SoftCocktails";
-import "../styles/cocktail.css";
-import AlcoholCocktail from "../components/AlcoholicCocktail";
-import CocktailShow from "../components/CocktailShow";
+import "@styles/cocktail.css";
+import AlcoholCocktail from "@components/AlcoholicCocktail";
+import CocktailShow from "@components/CocktailShow";
 
 export default function Cocktails() {
   const [cocktailResult, setCocktailResult] = useState(false);

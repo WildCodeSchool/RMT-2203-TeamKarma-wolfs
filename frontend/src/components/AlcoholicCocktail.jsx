@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "../styles/App.css";
+import "@styles/App.css";
 import ResultCocktails from "@components/ResultCocktails";
 
 export default function AlcoholCocktail({ handleChange, handleChoosen }) {
