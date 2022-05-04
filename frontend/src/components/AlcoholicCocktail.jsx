@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "../styles/App.css";
 import ResultCocktails from "@components/ResultCocktails";
 
-export default function AlcoholCocktail() {
+export default function AlcoholCocktail({ handleChange, handleChoosen }) {
   const [alcoholCocktail, setAlcoholCocktail] = useState([]);
   const [hardDisplay, setHardDisplay] = useState(null);
 
@@ -36,7 +36,12 @@ export default function AlcoholCocktail() {
       {hardDisplay === true ? (
         <div className="scroller">
           {alcoholCocktail.map((cocktail) => (
-            <ResultCocktails key={cocktail.idDrink} cocktail={cocktail} />
+            <ResultCocktails
+              key={cocktail.idDrink}
+              cocktail={cocktail}
+              handleChange={handleChange}
+              handleChoosen={handleChoosen}
+            />
           ))}
         </div>
       ) : null}
