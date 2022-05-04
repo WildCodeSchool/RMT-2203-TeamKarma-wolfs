@@ -1,6 +1,5 @@
 .slogan p {
   font-size: 1.4rem;
-  font-family: "Poppins", "sans-serif";
   color: var(--title-color);
   margin-top: 50px;
 }
@@ -59,7 +58,6 @@
 }
 
 .select-button {
-  font-family: sans-serif;
   font-size: 1.4rem;
   color: var(--black);
   border: 2px solid var(--main-color);
@@ -98,7 +96,7 @@
 
 .ingredients-list h2 {
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: var(--secondary-color);
   background-color: var(--main-color);
   margin-bottom: 20px;
@@ -123,7 +121,6 @@
 }
 
 .box p {
-  font-family: sans-serif;
   font-size: 1.1rem;
   color: var(--text-color);
 }
@@ -191,7 +188,6 @@
 }
 
 .resultBox p {
-  font-family: sans-serif;
   font-size: 1.1rem;
   color: var(--text-color);
 }
@@ -220,7 +216,6 @@
 }
 
 .recipeButton {
-  font-family: sans-serif;
   font-size: 1.4rem;
   color: var(--black);
   border: 2px solid var(--main-color);
@@ -236,17 +231,17 @@
   display: flex;
   justify-content: space-between;
   margin: auto;
-  width: 320px;
+  width: 350px;
   border-radius: 5px 5px 0 0;
   padding: 15px;
 }
 
 #resultsButton p {
   color: var(--secondary-color);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   background-color: var(--main-color);
   height: 36px;
-  padding: 5px 20px;
+  padding: 7px 20px;
   border-radius: 3px;
 }
 

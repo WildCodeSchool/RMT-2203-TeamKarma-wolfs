@@ -6,7 +6,6 @@
   margin: 40px auto;
   padding: 40px;
   width: 50%;
-  font-family: "poppins", sans-serif;
   background-color: var(--background-card);
   border-radius: 5px;
   box-shadow: 5px 5px 80px var(--card-shadow);
@@ -52,7 +51,6 @@
   margin: 10px auto 70px;
   padding: 40px;
   width: 50%;
-  font-family: "poppins", sans-serif;
   background-color: var(--background-card);
   border-radius: 5px;
   box-shadow: 5px 5px 80px var(--card-shadow);

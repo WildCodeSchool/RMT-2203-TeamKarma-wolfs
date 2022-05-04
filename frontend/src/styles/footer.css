@@ -9,11 +9,10 @@ footer {
 
 footer p {
   color: var(--text-color);
-  font-family: "Poppins", "sans-serif";
   font-size: 0.8rem;
   line-height: 1.5rem;
 }
 
 footer a {
-  color: var( --secondary-color);
+  color: var(--secondary-color);
 }
