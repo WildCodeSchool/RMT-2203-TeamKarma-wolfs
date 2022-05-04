@@ -54,6 +54,11 @@ body {
   --border-color: #1aea7f;
   --selectBtn: #969177;
   --black: #000000;
+  --border: rgb(150, 145, 119);
+  --shadow: #ccba6a;
+  --background-card: #141414;
+  --card-shadow: #7731b046;
+  --box-shadow: rgba(0, 0, 0, 0.726);
 }
 
 /* RESET.CSS */

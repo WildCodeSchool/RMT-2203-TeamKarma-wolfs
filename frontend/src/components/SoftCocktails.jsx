@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import "../styles/App.css";
+import "@styles/App.css";
 import ResultCocktails from "@components/ResultCocktails";
 
 export default function SoftCocktails() {

@@ -6,8 +6,8 @@ import Cocktails from "@pages/Cocktails";
 export default function Main() {
   return (
     <div>
-      <div className="slogan"><p>Choose your cocktail
-      </p>
+      <div className="slogan">
+        <p>Choose your cocktail</p>
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -16,9 +16,6 @@ export default function Main() {
         <Route path="/cocktails" element={<Cocktails />} />
         <Route path="/shopping" element={<Home />} />
       </Routes>
-      <div className="back-to-top-box">
-        <a href="#top" className="back-to-top" title="Back to top" aria-label="Scroll to Top"></a>
-      </div>
     </div>
   );
 }

@@ -348,6 +348,16 @@ export default function Home() {
             </div>
           ) : null}
         </div>
+        <div className="back-to-top-box">
+          <a
+            href="#top"
+            className="back-to-top"
+            title="Back to top"
+            aria-label="Scroll to Top"
+          >
+            Up
+          </a>
+        </div>
       </main>
     </div>
   );

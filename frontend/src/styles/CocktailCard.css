@@ -7,9 +7,9 @@
   padding: 40px;
   width: 50%;
   font-family: "poppins", sans-serif;
-  background-color: #141414;
+  background-color: var(--background-card);
   border-radius: 5px;
-  box-shadow: 5px 5px 80px #7731b080;
+  box-shadow: 5px 5px 80px var(--card-shadow);
   position: relative;
   animation: neon1 1.3s ease-in-out infinite alternate;
 }
@@ -40,8 +40,8 @@
 .cocktail-name {
   font-size: 2.7rem;
   font-family: "Nevrada", "sans-serif";
-  text-shadow: 1px 1px 1px #ccba6a;
-  color: #7731b0;
+  text-shadow: 1px 1px 1px var(--shadow);
+  color: var(--title-color);
   margin-bottom: 40px;
 }
 
@@ -53,30 +53,30 @@
   padding: 40px;
   width: 50%;
   font-family: "poppins", sans-serif;
-  background-color: #141414;
+  background-color: var(--background-card);
   border-radius: 5px;
-  box-shadow: 5px 5px 80px #7731b046;
+  box-shadow: 5px 5px 80px var(--card-shadow);
   animation: neon1 1.3s ease-in-out infinite alternate;
 }
 
 @keyframes neon1 {
   from {
-    box-shadow: 0 0 10px #7731b046, 0 0 20px #7731b046, 0 0 30px #7731b046,
-      0 0 40px #7731b046, 0 0 50px #7731b046, 0 0 60px #7731b046;
+    box-shadow: 0 0 10px var(--card-shadow), 0 0 20px var(--card-shadow), 0 0 30px var(--card-shadow),
+      0 0 40px var(--card-shadow), 0 0 50px var(--card-shadow), 0 0 60px var(--card-shadow);
   }
 
   to {
-    box-shadow: 0 0 5px #7731b046, 0 0 10px #7731b046, 0 0 15px #7731b046,
-      0 0 20px #7731b046, 0 0 25px #7731b046, 0 0 30px #7731b046;
+    box-shadow: 0 0 5px var(--card-shadow), 0 0 10px var(--card-shadow), 0 0 15px var(--card-shadow),
+      0 0 20px var(--card-shadow), 0 0 25px var(--card-shadow), 0 0 30px var(--card-shadow);
   }
 }
 
 .cocktail-name {
   font-size: 2.1rem;
   font-family: "Nevrada", "sans-serif";
-  text-shadow: 1px 1px 1px #ccba6a;
+  text-shadow: 1px 1px 1px var(--shadow);
   font-weight: 600;
-  color: #7731b0;
+  color: var(--title-color);
   text-transform: uppercase;
   word-break: break-word;
   letter-spacing: 3px;
@@ -92,14 +92,14 @@
 
 .card-top .ingredients {
   padding: 0 15px 15px;
-  color: #e4e4e4;
+  color: var(--text-color);
   text-align: left;
 }
 
 .card-top .ingredients h3 {
   font-size: 1.4rem;
   margin-bottom: 15px;
-  color: #f0e68c;
+  color: var(--secondary-color);
 }
 
 .card-top .ingredients li {
@@ -117,7 +117,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 3px;
-  box-shadow: 3px 3px 15px 3px #7a7a7a6b;
+  box-shadow: 3px 3px 15px 3px var(--primary-bg);
 }
 
 .card-top .card-img img {
@@ -139,13 +139,13 @@
 .card-bottom h3 {
   font-size: 1.4rem;
   margin-bottom: 15px;
-  color: #f0e68c;
+  color: var(--secondary-color);
 }
 
 .card-bottom p {
   font-size: 0.9rem;
   line-height: 32px;
-  color: #e4e4e4;
+  color: var(--text-color);
 }
 
 .random-card .select-button {

@@ -1,4 +1,4 @@
-import "../styles/cocktail.css";
+import "@styles/cocktail.css";
 
 export default function ResultCocktails({ cocktail }) {
   return (
