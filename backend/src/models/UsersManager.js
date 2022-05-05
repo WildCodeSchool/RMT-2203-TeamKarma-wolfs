@@ -34,38 +34,3 @@ class UsersManager extends AbstractManager {
 }
 
 module.exports = UsersManager;
-
-//   exports.findOne = (userId) => {
-//   return db
-//     .promise()
-//     .query("SELECT * from 'users' WHERE id = ?", [userId])
-//     .then(([result]) => result);
-// };
-
-// exports.findAll = () => {
-//   return db
-//     .promise()
-//     .query("SELECT * from 'users'")
-//     .then(([result]) => result);
-// };
-
-// exports.findOneByEmail = (userEmail) => {
-//   return db
-//     .promise()
-//     .query("SELECT * from 'users' WHERE email = ?", [userEmail])
-//     .then(([result]) => result);
-// };
-
-// exports.addOne = (user) => {
-//   const { name, email, hash } = user;
-//   return db
-//     .promise()
-//     .query("INSERT INTO 'users' (name, email, password) VALUES (?, ?, ?)", [
-//       name,
-//       email,
-//       hash,
-//     ])
-//     .then(([result]) => {
-//       return { id: result.insertId, name, email };
-//     });
-// };
