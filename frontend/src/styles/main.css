@@ -1,7 +1,7 @@
 .slogan p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: var(--title-color);
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .ingredients-box {
@@ -15,17 +15,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 120px;
-  height: 120px;
-  margin: 20px;
+  width: 80px;
+  height: 80px;
+  margin: 0 3%;
   border-radius: 5px;
   border: 2px solid var(--border);
   position: relative;
 }
 
 .ingredient-box img {
-  height: 55%;
-  width: 55%;
+  height: 45% !important;
+  width: 45% !important;
 }
 
 .anim1 {
@@ -58,11 +58,12 @@
 }
 
 .select-button {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  height: 34px;
   color: var(--black);
   border: 2px solid var(--main-color);
   background-color: var(--selectBtn);
-  padding: 3px 20px;
+  padding: 0px 20px;
   border-radius: 5px;
   transition: 0.3s;
   cursor: pointer;
@@ -81,9 +82,10 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 60%;
+  width: 90%;
   background-color: var(--background-box);
-  margin: 0 auto 80px;
+  margin: 0 auto 30px;
+  padding-bottom: 20px;
   border: 2px solid var(--border);
   border-radius: 6px;
 }
@@ -91,12 +93,12 @@
 .ingredients-list {
   width: 100%;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .ingredients-list h2 {
   width: 100%;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: var(--secondary-color);
   background-color: var(--main-color);
   margin-bottom: 20px;
@@ -106,28 +108,25 @@
 }
 
 .box {
+  width: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px 30px;
+  margin: 12px 10px;
 }
 
 .box img {
-  max-width: 100%;
-  margin-bottom: 10px;
+  max-width: 70%;
+  margin-bottom: 5px;
   filter: drop-shadow(12px 12px 8px var(--box-shadow));
   transition: 0.3s;
   cursor: pointer;
 }
-
 .box p {
-  font-size: 1.1rem;
+  max-width: 100%;
+  word-break: break-word;
+  font-size: 0.7rem;
   color: var(--text-color);
-}
-
-.box img:hover {
-  transform: rotate(-8deg);
-  opacity: 0.8;
 }
 
 .selected > p {
@@ -231,17 +230,17 @@
   display: flex;
   justify-content: space-between;
   margin: auto;
-  width: 350px;
+  width: 300px;
   border-radius: 5px 5px 0 0;
-  padding: 15px;
+  padding: 10px;
 }
 
 #resultsButton p {
   color: var(--secondary-color);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   background-color: var(--main-color);
-  height: 36px;
-  padding: 7px 20px;
+  height: 34px;
+  padding: 9px 20px;
   border-radius: 3px;
 }
 
@@ -295,8 +294,8 @@
 }
 .back-to-top-box {
   position: fixed;
-  bottom: 90px;
-  right: 10%;
+  bottom: 15px;
+  right: 5%;
   display: flex;
   width: 100%;
   justify-content: end;
@@ -309,32 +308,9 @@
   color: transparent;
   background-image: url(../assets/img/svg/back-to-top.svg);
   background-repeat: no-repeat;
-  width: 40px;
+  width: 30px;
   height: 20px;
   margin-left: auto;
-  transition: 0.3s;
-}
-
-.back-to-top:after {
-  position: absolute;
-  content: "";
-  width: 48px;
-  height: 48px;
-  left: calc(50% - 28px);
-  top: calc(50% - 24px);
-  border-radius: 50%;
-  border: 2px solid var(--title-color);
-  transition: 0.3s;
-  opacity: 0;
-}
-
-.back-to-top:hover {
-  transform: translateY(-8px);
-  transition: 0.3s;
-}
-
-.back-to-top:hover.back-to-top:after {
-  opacity: 1;
   transition: 0.3s;
 }
 
@@ -342,5 +318,136 @@
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
+  }
+}
+
+@media (min-width: 575.98px) {
+  .slogan p {
+    font-size: 1.3rem;
+    margin-top: 40px;
+  }
+
+  .ingredients-box {
+    justify-content: center;
+  }
+
+  .ingredient-box {
+    width: 120px;
+    height: 120px;
+    margin: 20px;
+  }
+
+  #resultsButton {
+    width: 350px;
+    height: 36px;
+  }
+
+  .select-button {
+    font-size: 1.4rem;
+  }
+
+  #resultsButton p {
+    font-size: 1.4rem;
+    padding: 6px 20px;
+  }
+
+  .ingredient-box img {
+    height: 55%;
+    width: 55%;
+  }
+
+  .ingredients-list h2 {
+    font-size: 1.7rem;
+  }
+
+  .full-box {
+    justify-content: center;
+  }
+
+  .ingredients-list {
+    padding-top: 40px;
+  }
+
+  .box {
+    margin: 20px 15px;
+    width: 20%;
+  }
+  .box img {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .box p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 767.98px) {
+  .slogan p {
+    font-size: 1.4rem;
+    margin-top: 50px;
+  }
+  .box {
+    margin: 9px 28px;
+  }
+  .box img {
+    margin-bottom: 8px;
+  }
+  .box p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 991.98px) {
+  .box {
+    margin: 15px 15px;
+  }
+
+  .back-to-top-box {
+    bottom: 25px;
+  }
+  .back-to-top {
+    width: 40px;
+    height: 20px;
+  }
+}
+
+@media (min-width: 1199.98px) {
+  .full-box {
+    width: 60%;
+    margin: 0 auto 80px;
+  }
+
+  .box img:hover {
+    transform: rotate(-8deg);
+    opacity: 0.8;
+  }
+
+  .back-to-top-box {
+    bottom: 95px;
+    right: 10%;
+  }
+
+  .back-to-top:after {
+    position: absolute;
+    content: "";
+    width: 48px;
+    height: 48px;
+    left: calc(50% - 28px);
+    top: calc(50% - 24px);
+    border-radius: 50%;
+    border: 2px solid var(--title-color);
+    transition: 0.3s;
+    opacity: 0;
+  }
+
+  .back-to-top:hover {
+    transform: translateY(-8px);
+    transition: 0.3s;
+  }
+
+  .back-to-top:hover.back-to-top:after {
+    opacity: 1;
+    transition: 0.3s;
   }
 }
