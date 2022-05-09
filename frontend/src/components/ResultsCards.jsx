@@ -1,6 +1,17 @@
-import "../styles/main.css";
+import "@styles/main.css";
+import { useEffect } from "react";
 
-export default function ResultsCards({ name, image, id, handleDisplay }) {
+export default function ResultsCards({
+  name,
+  image,
+  id,
+  handleDisplay,
+  setSearchButtonDisplay,
+}) {
+  useEffect(() => {
+    setSearchButtonDisplay(true);
+  }, []);
+
   return (
     <div id={`${id}`} className="resultBox">
       <img src={image} alt={name} value={id} />
@@ -9,7 +20,9 @@ export default function ResultsCards({ name, image, id, handleDisplay }) {
         className="recipeButton"
         type="button"
         value="recipeHidden"
-        onClick={(e) => handleDisplay(e)}
+        onClick={(e) => {
+          handleDisplay(e);
+        }}
       >
         See recipe
       </button>
