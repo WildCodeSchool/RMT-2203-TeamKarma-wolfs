@@ -3,11 +3,11 @@ import Home from "@pages/Home";
 import Favorites from "@pages/Favorites";
 import Random from "@pages/Random";
 import Cocktails from "@pages/Cocktails";
-import Shopping from "@pages/Shopping";
+import Shopping from "@pages/shopping";
 
 export default function Main({ loggedIn }) {
   return (
-    <div>
+    <div id="content-wrap">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/favorites" element={<Favorites loggedIn={loggedIn} />} />

@@ -1,3 +1,11 @@
+.App {
+  position: relative;
+  min-height: 100vh;
+}
+#content-wrap {
+  padding-bottom:5rem;
+}
+
 .slogan p {
   font-size: 1.2rem;
   color: var(--title-color);
@@ -260,7 +268,7 @@
   border: 2px solid rgb(150, 145, 119);
   border-radius: 6px;
   color: var(--secondary-color);
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
 }
 
 .favLogin {
@@ -275,7 +283,7 @@
   border: 2px solid rgb(150, 145, 119);
   border-radius: 6px;
   color: var(--secondary-color);
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
 }
 
 .shopping {
