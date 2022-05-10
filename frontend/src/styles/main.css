@@ -24,8 +24,8 @@
 }
 
 .ingredient-box img {
-  height: 45% !important;
-  width: 45% !important;
+  height: 45%;
+  width: 45%;
 }
 
 .anim1 {
@@ -148,7 +148,7 @@
   flex-wrap: wrap;
   width: 90%;
   max-width: 1200px;
-  background-color: var(--background-header-footer);
+  background-color: var(--background-box);
   margin: 40px auto 80px;
   border: 2px solid var(--border);
   border-radius: 6px;
@@ -156,7 +156,7 @@
 
 .search-results h2 {
   width: 100%;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: var(--secondary-color);
   background-color: var(--main-color);
   margin-bottom: 20px;
@@ -164,19 +164,6 @@
   border: 1px solid var(--secondary-color);
   border-radius: 5px 5px 0 0;
 }
-/* 
-.resultBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 25%;
-  background-color: var(--background-card);
-  padding: 20px;
-  margin: 30px 30px;
-  border: 2px solid var(--main-color);
-  border-radius: 5px;
-  box-shadow: 5px 5px 20px var(--box-shadow);
-} */
 
 .resultBox img {
   width: 70%;
@@ -384,6 +371,20 @@
   .search-results h2 {
     font-size: 1.7rem;
   }
+
+  .search-results h2 {
+    font-size: 1.4rem;
+  }
+
+  .show-cocktails > button {
+    font-size: 2rem;
+  }
+
+  .search-results .resultBox {
+    width: 45%;
+    margin: 10px;
+    min-height: 340px;
+  }
 }
 
 @media (min-width: 767.98px) {
@@ -399,6 +400,20 @@
   }
   .box p {
     font-size: 1.1rem;
+  }
+
+  .search-results h2 {
+    font-size: 1.4rem;
+  }
+
+  .search-results .resultBox {
+    width: 30%; 
+    min-height: 300px;
+  }
+
+  .resultBox {
+    width: 30%; 
+    min-height: 300px;
   }
 }
 
@@ -417,6 +432,10 @@
 
   .search-results h2 {
     font-size: 2rem;
+  }
+
+  .search-results .resultBox {
+    min-height: 340px;
   }
 }
 
@@ -459,20 +478,11 @@
     transition: 0.3s;
   }
 
-  .search-results {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 60%;
-    max-width: 1200px;
-    background-color: var(--background-header-footer);
-    margin: 40px auto 80px;
-    border: 2px solid var(--border);
-    border-radius: 6px;
+  .search-results h2 {
+    font-size: 1.8rem;
   }
 
-  .search-results h2 {
-    font-size: 2rem;
+  .search-results .resultBox {
+    min-height: 320px;
   }
 }

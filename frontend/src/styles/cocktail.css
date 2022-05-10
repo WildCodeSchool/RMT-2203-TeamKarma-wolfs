@@ -1,13 +1,9 @@
-.cocktails-type {
-  min-height: calc(100vh - 435px);
-}
-
 .show-cocktails {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 60%;
+  width: 90%;
   max-width: 1200px;
   background-color: var(--background-box);
   margin: 50px auto 80px;
@@ -17,7 +13,7 @@
 
 .show-cocktails > button {
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.4rem;
   color: var(--secondary-color);
   background-color: var(--main-color);
   margin-bottom: 20px;
@@ -71,7 +67,7 @@
   width: 90%;
   background-color: var(--background-card);
   padding: 20px;
-  margin: 15px 30px;
+  margin: 10px;
   border: 2px solid var(--main-color);
   border-radius: 5px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.801);
@@ -104,8 +100,18 @@
 }
 
 @media (min-width: 575.98px) {
-  .resultBox {
-    width: 40%;
+  .show-cocktails .resultBox {
+    width: 45%;
+    margin: 10px;
+    min-height: 340px;
+  }
+}
+
+@media (min-width: 767.98px) {
+
+  .show-cocktails .resultBox {
+    width: 30%; 
+    min-height: 300px;
   }
 }
 
@@ -127,7 +133,13 @@
     font-size: 2rem;
   }
 
-  .resultBox {
-    width: 25%;
+  .show-cocktails .resultBox {
+    min-height: 340px;
+  }
+}
+
+@media (min-width: 1199.98px) {
+  .show-cocktails .resultBox {
+    min-height: 320px;
   }
 }

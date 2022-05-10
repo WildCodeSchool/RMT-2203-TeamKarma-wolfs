@@ -1,11 +1,10 @@
 /* STRUCTURE */
 .card-box {
   display: flex;
-  margin: 0 auto;
   flex-direction: column;
-  margin: 40px auto;
-  padding: 40px;
-  width: 50%;
+  margin: 35px auto;
+  padding: 25px;
+  width: 90%;
   background-color: var(--background-card);
   border-radius: 5px;
   box-shadow: 5px 5px 80px var(--card-shadow);
@@ -37,11 +36,15 @@
 
 /* TITLE */
 .cocktail-name {
-  font-size: 2.7rem;
+  font-size: 1.2rem;
   font-family: "Nevrada", "sans-serif";
   text-shadow: 1px 1px 1px var(--shadow);
   color: var(--title-color);
-  margin-bottom: 40px;
+  text-transform: uppercase;
+  word-break: break-word;
+  letter-spacing: 3px;
+  line-height: 2rem;
+  margin-bottom: 30px;
 }
 
 /* CARD */
@@ -49,7 +52,7 @@
   display: flex;
   flex-direction: column;
   margin: 10px auto 70px;
-  padding: 40px;
+  padding: 25px;
   width: 90%;
   background-color: var(--background-card);
   border-radius: 5px;
@@ -71,39 +74,26 @@
   }
 }
 
-.cocktail-name {
-  font-size: 1.7rem;
-  font-family: "Nevrada", "sans-serif";
-  text-shadow: 1px 1px 1px var(--shadow);
-  font-weight: 600;
-  color: var(--title-color);
-  text-transform: uppercase;
-  word-break: break-word;
-  letter-spacing: 3px;
-  line-height: 3rem;
-  margin-bottom: 30px;
-}
-
 .card-top {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 35px;
 }
 
 .card-top .ingredients {
-  padding: 0 15px 15px;
+  padding: 0 30px 15px 0;
   color: var(--text-color);
-  text-align: center;
+  text-align: left;
 }
 
 .card-top .ingredients h3 {
-  font-size: 1.4rem;
+  font-size: 1rem;
   margin-bottom: 15px;
   color: var(--secondary-color);
 }
 
 .card-top .ingredients li {
-  font-size: 1rem;
+  font-size: 0.7rem;
   list-style: inside;
   word-break: break-word;
   margin-bottom: 8px;
@@ -128,22 +118,21 @@
 
 .card-bottom {
   background-color: #222222;
-  min-height: 250px;
+  min-height: 200px;
   padding: 20px;
-  margin-bottom: 30px;
   text-align: left;
   border-radius: 6px;
   border: solid 2px #1aea7fa6;
 }
 
 .card-bottom h3 {
-  font-size: 1.4rem;
+  font-size: 1rem;
   margin-bottom: 15px;
   color: var(--secondary-color);
 }
 
 .card-bottom p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   line-height: 32px;
   color: var(--text-color);
 }
@@ -170,7 +159,38 @@
 }
 
 @media (min-width: 575.98px) {
+  .card-top {
+    justify-content: space-between;
+  }
   .random-card .card-box {
+    padding: 40px;
+    width: 80%;
+  }
+  .cocktail-name {
+    font-size: 1.7rem;
+  }
+  .card-top .card-img img {
+    width: 100px;
+    height: 100px;
+  }
+  .card-top .card-img {
+    width: 100px;
+    height: 100px;
+  }
+  .card-top .ingredients h3 {
+    font-size: 1.2rem;
+  }
+  .card-top .ingredients li {
+    font-size: 0.9rem;
+  }
+  .card-bottom h3 {
+    font-size: 1.2rem;
+  }
+  .card-bottom p {
+    font-size: 1rem;
+  }
+
+  .card-box {
     padding: 40px;
     width: 80%;
   }
@@ -178,33 +198,94 @@
 
 @media (min-width: 767.98px) {
   .random-card .card-box {
-    padding: 40px;
+    width: 70%;
+  }
+  .cocktail-name {
+    font-size: 2.2rem;
+    line-height: 3rem;
+  }
+  .card-top .card-img img {
+    width: 120px;
+    height: 120px;
+    border-radius: 3px;
+  }
+  .card-top .card-img {
+    max-width: 35%;
+    width: 120px;
+    height: 120px;
+  }
+  .card-bottom {
+    margin-bottom: 15px;
+    min-height: 250px;
+  }
+  .card-top .ingredients h3 {
+    font-size: 1.7rem;
+  }
+  .card-top .ingredients li {
+    font-size: 1rem;
+  }
+  .card-bottom h3 {
+    font-size: 1.7rem;
+  }
+  .card-bottom p {
+    font-size: 1.2rem;
+  }
+
+  .card-box {
     width: 70%;
   }
 }
 
 @media (min-width: 991.98px) {
   .random-card .card-box {
-    padding: 40px;
+    width: 60%;
+  }
+  .card-top .ingredients {
+    padding: 0 15px 15px;
+  }
+  .card-top .ingredients h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+  .card-top .ingredients li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  .card-bottom {
+    margin-bottom: 30px;
+    min-height: 250px;
+  }
+  .card-bottom h3 {
+    font-size: 1.2rem;
+  }
+  .card-bottom p {
+    font-size: 1rem;
+  }
+  .cocktail-name {
+    font-size: 2.7rem;
+    line-height: 3rem;
+    margin-bottom: 40px;
+  }
+
+  .card-box {
     width: 60%;
   }
 }
 
 @media (min-width: 1199.98px) {
   .random-card .card-box {
-    padding: 40px;
     width: 50%;
   }
   .card-top .card-img {
     width: 140px;
     height: 140px;
   }
-  .cocktail-name {
-    font-size: 2.1rem;
-    margin-bottom: 40px;
+  .card-top .card-img img {
+    width: 140px;
+    height: 140px;
   }
-  .card-top .ingredients {
-    padding: 0 15px 15px;
-    text-align: left;
+
+  .card-box {
+    width: 50%;
   }
 }
