@@ -2,81 +2,302 @@
 header {
   background-color: var(--background-header-footer);
   box-shadow: 0px 6px 13px -6px #1aea7f8e;
+  padding-bottom: 3rem;
 }
-header #navbar {
-  display: flex;
-  flex-direction: column;
-  margin: 10px 0;
-  padding: 15px 10px;
-  width: 80%;
-  margin: 0 auto;
+
+/* TITLE */
+header h1 {
+  font-family: "Nevrada", "sans-serif";
+  text-shadow: 1px 1px 1px var(--shadow);
+  text-transform: uppercase;
 }
 
 /* LOGO */
 header .logo {
   display: flex;
+  justify-content: center;
   align-items: center;
   color: var(--title-color);
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 header .logo img {
-  width: 150px;
+  width: 80px;
 }
 
-/* TITLE */
-header h1 {
-  font-size: 2rem;
-  margin-top: 35px;
-  text-shadow: 1px 1px 1px var(--shadow);
-  font-family: "Nevrada", "sans-serif";
-  letter-spacing: 1.3px;
-  text-transform: uppercase;
-  line-height: 2.7rem;
-}
-header h1 span {
-  font-size: 2.6rem;
+/* BURGER MENU TEST  */
+/* .container {
+  max-width: 1050px;
+  width: 100%;
+  margin: auto;
+} 
+
+.navbar-burger {
+  width: 100%;
 }
 
-/* NAVBAR */
-header .menu ul {
+.nav-container {
   display: flex;
-  justify-content: space-around;
-  border-top: 3px solid var(--border-color);
-  padding: 0px 85px;
-}
-header .menu ul li {
-  font-size: 1.2rem;
-  color: var(--secondary-color);
-  list-style: none;
-  margin: 0 5px;
-  padding: 0px 15px;
-}
-header .menu ul li a {
-  text-decoration: none;
-  padding: 13px 10px;
-  color: var(--secondary-color);
-  line-height: 1.5rem;
-  text-align: center;
-  display: block;
-}
-header .menu ul li a:hover {
-  border-top: 3px solid var(--border-color);
-  transition: 0.2s;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
 }
 
-#loginButton {
+.navbar-burger .nav-container a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+}
+
+.navbar-burger .nav-container a:hover{
+    font-weight: bolder;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+  height: 60px;
+}
+
+.nav-container .checkbox {
   position: absolute;
-  height: 50px;
-  width: 200px;
-  color: var(--secondary-color);
-  background-color: var(--main-color);
-  border: 1px solid var(--secondary-color);
-  font-size: 1.8rem;
-  top: 0;
-  right: 0;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  opacity: 0;
   cursor: pointer;
 }
 
-#loginButton:hover {
-  font-size: 2rem;
+.nav-container .hamburger-lines-mobile  {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.nav-container .hamburger-lines-mobile .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: var(--border-color);
+}
+
+.nav-container .hamburger-lines-mobile .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines-mobile .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines-mobile .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+.navbar-burger {
+  margin-top: 0;
+}
+
+.navbar-burger  .menu {
+  padding-top: 120px;
+  background-color: blue;
+  height: 100vh;
+  width: 100%;
+  transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+}
+
+.nav-container input[type="checkbox"]:checked ~ .menu {
+  transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines-mobile .line1 {
+  transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines-mobile .line2 {
+  transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines-mobile .line3 {
+  transform: rotate(-45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .logo{
+  display: none;
+} */
+
+
+
+/* LOGIN BUTTON */
+#loginButton {
+  height: 20px;
+  width: 80px;
+  font-size: 0.8rem;
+  top: 0;
+  right: 0;
+  position: absolute;
+  color: var(--secondary-color);
+  background-color: var(--main-color);
+  border: 1px solid var(--secondary-color);
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (min-width: 575.98px) {
+  #loginButton {
+    height: 30px;
+    width: 100px;
+    font-size: 1rem;
+    top: 0;
+    right: 0;
+  }
+
+  .checkbox {
+    display: none;
+  }
+}
+
+@media (min-width: 767.98px) {
+  header #navbar {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    padding: 10px 10px;
+    width: 95%;
+    margin: 0 auto;
+  }
+  /* LOGO */
+  header .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--title-color);
+    margin-bottom: 15px;
+  }
+  header .logo img {
+    width: 100px;
+  }
+
+  /* TITLE */
+  header h1 {
+    font-size: 1.6rem;
+    margin-top: 30px;
+    letter-spacing: 1.3px;
+    line-height: 2.4rem;
+  }
+  header h1 span {
+    font-size: 2.3rem;
+  }
+
+  /* NAVBAR */
+  header .menu ul {
+    display: flex;
+    justify-content: space-around;
+    border-top: 3px solid var(--border-color);
+    padding: 0px 85px;
+  }
+  header .menu ul li {
+    color: var(--secondary-color);
+    list-style: none;
+    margin: 0 5px;
+    font-size: 1rem;
+    padding: 0px;
+  }
+  header .menu ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    text-align: center;
+    display: block;
+    padding: 10px 10px;
+    line-height: 1rem;
+  }
+  header .menu ul li a:hover {
+    border-top: 3px solid var(--border-color);
+    transition: 0.2s;
+  }
+
+  #loginButton {
+    height: 30px;
+    width: 100px;
+    font-size: 1rem;
+    top: 0;
+    right: 0;
+  }
+
+  /* BURGER */
+
+.logo {
+
+}
+}
+
+
+
+
+@media (min-width: 991.98px) {
+}
+
+@media (min-width: 1199.98px) {
+  header #navbar {
+    margin: 10px 0;
+    padding: 15px 10px;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  /* LOGO */
+  header .logo {
+    margin-bottom: 30px;
+  }
+  header .logo img {
+    width: 150px;
+  }
+ 
+  /* TITLE */
+  header h1 {
+    font-size: 2rem;
+    margin-top: 35px;
+    letter-spacing: 1.3px;
+    line-height: 2.7rem;
+  }
+  header h1 span {
+    font-size: 2.6rem;
+  }
+  /* NAVBAR */
+  header .menu ul li {
+    font-size: 1.2rem;
+    margin: 0 5px;
+    padding: 0px 15px;
+  }
+  header .menu ul li a {
+    padding: 13px 10px;
+    line-height: 1.5rem;
+  }
+  #loginButton {
+    height: 50px;
+    width: 200px;
+    font-size: 1.8rem;
+    top: 0;
+    right: 0;
+  }
+
+  #loginButton:hover {
+    font-size: 2rem;
+  }
 }
