@@ -3,7 +3,7 @@ import Home from "@pages/Home";
 import Favorites from "@pages/Favorites";
 import Random from "@pages/Random";
 import Cocktails from "@pages/Cocktails";
-import Shopping from "@pages/shopping";
+import Shopping from "@pages/Shopping";
 
 export default function Main({ loggedIn }) {
   return (
