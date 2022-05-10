@@ -10,6 +10,9 @@ header h1 {
   font-family: "Nevrada", "sans-serif";
   text-shadow: 1px 1px 1px var(--shadow);
   text-transform: uppercase;
+  padding-top:2.5rem;
+  line-height: 1.8rem;
+  font-size: 1.5rem;
 }
 
 /* LOGO */
@@ -19,13 +22,138 @@ header .logo {
   align-items: center;
   color: var(--title-color);
   margin-bottom: 15px;
+  padding-top: 0.5rem;
 }
 header .logo img {
   width: 80px;
 }
 
-/* BURGER MENU TEST  */
-/* .container {
+/* SIGN UP LOG IN */
+.loginMenu {
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+  width: 100px;
+  color: var(--secondary-color);
+  background-color: var(--main-color);
+  border: 1px solid var(--secondary-color);
+  cursor: pointer;
+  z-index: 99;
+  border-radius: 5px 5px;
+  
+}
+
+.loginMenu li button {
+  color: var(--secondary-color);
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  padding: 0px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+
+}
+
+.loginMenu li button:hover {
+  text-decoration: underline;
+}
+
+.dropdownLogin {
+  position: absolute;
+  top: -10;
+  right: 0;
+  height: 50vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2.5rem;
+  align-items: center;
+  z-index: 1;
+  margin-top: 40px;
+  padding: 15px 0px;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  border-radius: 5px 5px;
+
+}
+
+.dropdownLogin input {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  margin: 3px 0px;
+  padding: 3px 5px;
+}
+
+.dropdownLogin button {
+  margin-top: 50px;
+  color: var(--secondary-color);
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+.dropdownSignup {
+  position: absolute;
+  top: -10;
+  right: 0;
+  height: 50vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2rem;
+  align-items: center;
+  z-index: 1;
+  margin-top: 40px;
+  padding: 15px 0px;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  border-radius: 5px 5px;
+
+}
+
+.dropdownSignup input {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  margin: 3px 0px;
+  padding: 3px 5px;
+}
+
+.dropdownSignup button {
+  margin-top: 20px;
+  color: var(--secondary-color);
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+.welcomeMessage {
+  color: #7731b0;
+  text-shadow: 1px 1px 1px #ccba6a;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+
+/*BURGER MENU */
+.navbar-desktop{
+  display: none;
+}
+
+.container {
   max-width: 1050px;
   width: 100%;
   margin: auto;
@@ -33,6 +161,7 @@ header .logo img {
 
 .navbar-burger {
   width: 100%;
+  
 }
 
 .nav-container {
@@ -41,6 +170,7 @@ header .logo img {
   align-items: center;
   height: 62px;
 }
+
 .header {
   position: relative;
 }
@@ -48,8 +178,9 @@ header .logo img {
 .navbar-burger .nav-container a {
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 2rem;
   padding: 0.7rem;
+  line-height: 7rem;
 }
 
 .navbar-burger .nav-container a:hover{
@@ -65,11 +196,11 @@ header .logo img {
 .nav-container .checkbox {
   position: absolute;
   display: block;
-  height: 32px;
-  width: 32px;
-  top: 20px;
-  left: 20px;
-  z-index: 5;
+  height: 50px;
+  width: 50px;
+  top: 25px;
+  left: 10px;
+  z-index: 9999;
   opacity: 0;
   cursor: pointer;
 }
@@ -81,7 +212,7 @@ header .logo img {
   position: absolute;
   top: 17px;
   left: 20px;
-  z-index: 2;
+  z-index: 9998;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -113,9 +244,9 @@ header .logo img {
   margin-top: 0;
 }
 
-.navbar-burger  .menu {
-  padding-top: 120px;
-  background-color: blue;
+.navbar-burger  .menu-burger {
+  padding-top: 20%;
+  background-color: #121212;
   height: 100vh;
   width: 100%;
   transform: translate(-150%);
@@ -123,9 +254,13 @@ header .logo img {
   flex-direction: column;
   transition: transform 0.5s ease-in-out;
   text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
 }
 
-.nav-container input[type="checkbox"]:checked ~ .menu {
+.nav-container input[type="checkbox"]:checked ~ .menu-burger {
   transform: translateX(0);
 }
 
@@ -143,34 +278,92 @@ header .logo img {
 
 .nav-container input[type="checkbox"]:checked ~ .logo{
   display: none;
-} */
-
-
-
-/* LOGIN BUTTON */
-#loginButton {
-  height: 20px;
-  width: 80px;
-  font-size: 0.8rem;
-  top: 0;
-  right: 0;
-  position: absolute;
-  color: var(--secondary-color);
-  background-color: var(--main-color);
-  border: 1px solid var(--secondary-color);
-  cursor: pointer;
-  font-family: "Poppins", sans-serif;
 }
 
+
+
+
 @media (min-width: 575.98px) {
-  #loginButton {
-    height: 30px;
-    width: 100px;
-    font-size: 1rem;
+  /* LOG IN */
+  .loginMenu {
+    float: right;
+    position: absolute;
     top: 0;
     right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    width: 160px;
+    cursor: pointer;
+  }
+  
+  .loginMenu li button {
+    color: var(--secondary-color);
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    padding: 0px 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
   }
 
+  .dropdownSignup {
+    position: absolute;
+
+    top: -10;
+    right: 0;
+    height: auto;
+    width: 160px;
+    z-index: 1;
+    margin-top: 40px;
+    padding: 15px 0px;
+
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dropdownSignup input {
+    width: 80%;
+    margin: 3px 0px;
+    padding: 3px 5px;
+  }
+  
+  .dropdownSignup button {
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 1.2rem;
+  }
+
+  .dropdownLogin {
+    position: absolute;
+    top: -10;
+    right: 0;
+    height: auto;
+    width: 160px;
+    z-index: 1;
+    margin-top: 40px;
+    padding: 15px 0px;
+ 
+  }
+
+  .dropdownLogin input {
+    width: 80%;
+    margin: 3px 0px;
+    padding: 3px 5px;
+  }
+  
+  .dropdownLogin button {
+    margin-top: 10px;
+ 
+    padding: 5px;
+    font-size: 1.2rem;
+  }
   .checkbox {
     display: none;
   }
@@ -184,6 +377,12 @@ header .logo img {
     padding: 10px 10px;
     width: 95%;
     margin: 0 auto;
+  }
+  .navbar-burger {
+    display: none;
+  }
+  .navbar-desktop {
+    display:block;
   }
   /* LOGO */
   header .logo {
@@ -234,24 +433,18 @@ header .logo img {
     border-top: 3px solid var(--border-color);
     transition: 0.2s;
   }
-
-  #loginButton {
-    height: 30px;
-    width: 100px;
-    font-size: 1rem;
-    top: 0;
-    right: 0;
+  header {
+    padding-bottom: 1rem;
   }
-
-  /* BURGER */
-
-
 }
 
 
 
 
 @media (min-width: 991.98px) {
+  header {
+    padding-bottom: 0px;
+  }
 }
 
 @media (min-width: 1199.98px) {
@@ -290,110 +483,5 @@ header .logo img {
     padding: 13px 10px;
     line-height: 1.5rem;
   }
-  #loginButton {
-    height: 50px;
-    width: 200px;
-    font-size: 1.8rem;
-    top: 0;
-    right: 0;
-  }
-
-  #loginButton:hover {
-    font-size: 2rem;
-  }
-.loginMenu {
-  float: right;
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  height: 40px;
-  width: 160px;
-  color: var(--secondary-color);
-  background-color: var(--main-color);
-  border: 1px solid var(--secondary-color);
-  cursor: pointer;
 }
 
-.loginMenu li button {
-  color: var(--secondary-color);
-  background-color: Transparent;
-  background-repeat: no-repeat;
-  border: none;
-  padding: 0px 10px;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.loginMenu li button:hover {
-  text-decoration: underline;
-}
-
-.dropdownLogin {
-  position: absolute;
-  top: -10;
-  right: 0;
-  height: auto;
-  width: 160px;
-  z-index: 1;
-  margin-top: 40px;
-  padding: 15px 0px;
-  border: 1px solid var(--secondary-color);
-  background-color: var(--main-color);
-  color: var(--secondary-color);
-}
-
-.dropdownLogin input {
-  width: 80%;
-  margin: 3px 0px;
-  padding: 3px 5px;
-}
-
-.dropdownLogin button {
-  margin-top: 10px;
-  color: var(--secondary-color);
-  background-color: Transparent;
-  background-repeat: no-repeat;
-  padding: 5px;
-  font-size: 1.2rem;
-}
-
-.dropdownSignup {
-  position: absolute;
-  top: -10;
-  right: 0;
-  height: auto;
-  width: 160px;
-  z-index: 1;
-  margin-top: 40px;
-  padding: 15px 0px;
-  border: 1px solid var(--secondary-color);
-  background-color: var(--main-color);
-  color: var(--secondary-color);
-}
-
-.dropdownSignup input {
-  width: 80%;
-  margin: 3px 0px;
-  padding: 3px 5px;
-}
-
-.dropdownSignup button {
-  margin-top: 10px;
-  color: var(--secondary-color);
-  background-color: Transparent;
-  background-repeat: no-repeat;
-  padding: 5px;
-  font-size: 1.2rem;
-}
-
-.welcomeMessage {
-  color: #7731b0;
-  text-shadow: 1px 1px 1px #ccba6a;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-}

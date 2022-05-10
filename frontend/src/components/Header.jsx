@@ -206,7 +206,7 @@ export default function Header({
                   <span>f</span>inder
                 </h1>
               </div>
-              <div className="menu">
+              <div className="menu-burger">
                 <ul>
                   <li>
                     <NavLink style={getActiveLinkStyle} to="/">
