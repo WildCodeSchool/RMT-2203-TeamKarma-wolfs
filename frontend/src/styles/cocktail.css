@@ -108,9 +108,8 @@
 }
 
 @media (min-width: 767.98px) {
-
   .show-cocktails .resultBox {
-    width: 30%; 
+    width: 30%;
     min-height: 300px;
   }
 }
