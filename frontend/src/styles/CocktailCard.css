@@ -50,7 +50,7 @@
   flex-direction: column;
   margin: 10px auto 70px;
   padding: 40px;
-  width: 50%;
+  width: 90%;
   background-color: var(--background-card);
   border-radius: 5px;
   box-shadow: 5px 5px 80px var(--card-shadow);
@@ -72,7 +72,7 @@
 }
 
 .cocktail-name {
-  font-size: 2.1rem;
+  font-size: 1.7rem;
   font-family: "Nevrada", "sans-serif";
   text-shadow: 1px 1px 1px var(--shadow);
   font-weight: 600;
@@ -81,7 +81,7 @@
   word-break: break-word;
   letter-spacing: 3px;
   line-height: 3rem;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .card-top {
@@ -93,7 +93,7 @@
 .card-top .ingredients {
   padding: 0 15px 15px;
   color: var(--text-color);
-  text-align: left;
+  text-align: center;
 }
 
 .card-top .ingredients h3 {
@@ -111,8 +111,8 @@
 
 .card-top .card-img {
   max-width: 35%;
-  width: 140px;
-  height: 140px;
+  width: 80px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,8 +121,8 @@
 }
 
 .card-top .card-img img {
-  width: 140px;
-  height: 140px;
+  width: 80px;
+  height: 80px;
   border-radius: 3px;
 }
 
@@ -167,4 +167,44 @@
   color: var(--text-color);
   border-radius: 50px;
   transition: 0.3s;
+}
+
+@media (min-width: 575.98px) {
+  .random-card .card-box {
+    padding: 40px;
+    width: 80%;
+  }
+}
+
+@media (min-width: 767.98px) {
+  .random-card .card-box {
+    padding: 40px;
+    width: 70%;
+  }
+}
+
+@media (min-width: 991.98px) {
+  .random-card .card-box {
+    padding: 40px;
+    width: 60%;
+  }
+}
+
+@media (min-width: 1199.98px) {
+  .random-card .card-box {
+    padding: 40px;
+    width: 50%;
+  }
+  .card-top .card-img {
+    width: 140px;
+    height: 140px;
+  }
+  .cocktail-name {
+    font-size: 2.1rem;
+    margin-bottom: 40px;
+  }
+  .card-top .ingredients {
+    padding: 0 15px 15px;
+    text-align: left;
+  }
 }

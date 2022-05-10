@@ -45,28 +45,33 @@
 }
 
 .scroller::-webkit-scrollbar {
-  width: 10px; /* width of the entire scrollbar */
+  width: 10px;
+  /* width of the entire scrollbar */
 }
 
 .scroller::-webkit-scrollbar-track {
-  background: var(--main-color); /* color of the tracking area */
+  background: var(--main-color);
+  /* color of the tracking area */
   margin-top: -20px;
 }
 
 .scroller::-webkit-scrollbar-thumb {
-  background-color: var(--title-color); /* color of the scroll thumb */
-  border-radius: 10px; /* roundness of the scroll thumb */
-  border: 2px solid var(--shadow); /* creates padding around scroll thumb */
+  background-color: var(--title-color);
+  /* color of the scroll thumb */
+  border-radius: 10px;
+  /* roundness of the scroll thumb */
+  border: 2px solid var(--shadow);
+  /* creates padding around scroll thumb */
 }
 
 .resultBox {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 25%;
+  width: 90%;
   background-color: var(--background-card);
   padding: 20px;
-  margin: 30px 30px;
+  margin: 15px 30px;
   border: 2px solid var(--main-color);
   border-radius: 5px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.801);
@@ -96,4 +101,33 @@
   border-radius: 5px;
   transition: 0.3s;
   cursor: pointer;
+}
+
+@media (min-width: 575.98px) {
+  .resultBox {
+    width: 40%;
+  }
+}
+
+@media (min-width: 991.98px) {
+  .box {
+    margin: 15px 15px;
+  }
+
+  .back-to-top-box {
+    bottom: 25px;
+  }
+
+  .back-to-top {
+    width: 40px;
+    height: 20px;
+  }
+
+  .search-results h2 {
+    font-size: 2rem;
+  }
+
+  .resultBox {
+    width: 25%;
+  }
 }
