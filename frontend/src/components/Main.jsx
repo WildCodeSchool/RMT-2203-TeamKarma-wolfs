@@ -1,17 +1,19 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "@pages/Home";
+import Favorites from "@pages/Favorites";
 import Random from "@pages/Random";
 import Cocktails from "@pages/Cocktails";
+import Shopping from "@pages/shopping";
 
-export default function Main() {
+export default function Main({ loggedIn }) {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/favorites" element={<Home />} />
+        <Route path="/favorites" element={<Favorites loggedIn={loggedIn} />} />
         <Route path="/random" element={<Random />} />
         <Route path="/cocktails" element={<Cocktails />} />
-        <Route path="/shopping" element={<Home />} />
+        <Route path="/shopping" element={<Shopping loggedIn={loggedIn} />} />
       </Routes>
     </div>
   );

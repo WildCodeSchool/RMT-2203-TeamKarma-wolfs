@@ -41,6 +41,9 @@ header .logo img {
   align-items: center;
   height: 62px;
 }
+.header {
+  position: relative;
+}
 
 .navbar-burger .nav-container a {
   text-decoration: none;
@@ -242,9 +245,7 @@ header .logo img {
 
   /* BURGER */
 
-.logo {
 
-}
 }
 
 
@@ -300,4 +301,99 @@ header .logo img {
   #loginButton:hover {
     font-size: 2rem;
   }
+.loginMenu {
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+  width: 160px;
+  color: var(--secondary-color);
+  background-color: var(--main-color);
+  border: 1px solid var(--secondary-color);
+  cursor: pointer;
+}
+
+.loginMenu li button {
+  color: var(--secondary-color);
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  padding: 0px 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.loginMenu li button:hover {
+  text-decoration: underline;
+}
+
+.dropdownLogin {
+  position: absolute;
+  top: -10;
+  right: 0;
+  height: auto;
+  width: 160px;
+  z-index: 1;
+  margin-top: 40px;
+  padding: 15px 0px;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+}
+
+.dropdownLogin input {
+  width: 80%;
+  margin: 3px 0px;
+  padding: 3px 5px;
+}
+
+.dropdownLogin button {
+  margin-top: 10px;
+  color: var(--secondary-color);
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+.dropdownSignup {
+  position: absolute;
+  top: -10;
+  right: 0;
+  height: auto;
+  width: 160px;
+  z-index: 1;
+  margin-top: 40px;
+  padding: 15px 0px;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+}
+
+.dropdownSignup input {
+  width: 80%;
+  margin: 3px 0px;
+  padding: 3px 5px;
+}
+
+.dropdownSignup button {
+  margin-top: 10px;
+  color: var(--secondary-color);
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+.welcomeMessage {
+  color: #7731b0;
+  text-shadow: 1px 1px 1px #ccba6a;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
 }

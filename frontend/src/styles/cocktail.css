@@ -1,6 +1,6 @@
 .cocktails-type {
   min-height: calc(100vh - 435px);
-} 
+}
 
 .show-cocktails {
   display: flex;
