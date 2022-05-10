@@ -18,6 +18,7 @@ export default function Header({
   const [signupUsername, setSignupUsername] = useState("");
   const [signupEmail, setSignupEmail] = useState("");
   const [signupPassword, setSignupPassword] = useState("");
+  const [checked, setChecked] = useState(false);
 
   const displayLogin = () => {
     setShowLogin(!showLogin);
@@ -193,7 +194,14 @@ export default function Header({
         <nav id="navbar">
           <div className="navbar-burger">
             <div className="containers nav-container">
-              <input className="checkbox" type="checkbox" name="" id="" />
+              <input
+                className="checkbox"
+                type="checkbox"
+                checked={checked}
+                name=""
+                id=""
+                onChange={() => setChecked(!checked)}
+              />
               <div className="hamburger-lines-mobile">
                 <span className="line line1" />
                 <span className="line line2" />
@@ -209,27 +217,47 @@ export default function Header({
               <div className="menu-burger">
                 <ul>
                   <li>
-                    <NavLink style={getActiveLinkStyle} to="/">
+                    <NavLink
+                      style={getActiveLinkStyle}
+                      to="/"
+                      onClick={() => setChecked(false)}
+                    >
                       Home
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink style={getActiveLinkStyle} to="/favorites">
+                    <NavLink
+                      style={getActiveLinkStyle}
+                      to="/favorites"
+                      onClick={() => setChecked(false)}
+                    >
                       Favorites
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink style={getActiveLinkStyle} to="/random">
+                    <NavLink
+                      style={getActiveLinkStyle}
+                      to="/random"
+                      onClick={() => setChecked(false)}
+                    >
                       Random Cocktail
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink style={getActiveLinkStyle} to="/cocktails">
+                    <NavLink
+                      style={getActiveLinkStyle}
+                      to="/cocktails"
+                      onClick={() => setChecked(false)}
+                    >
                       Cocktails
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink style={getActiveLinkStyle} to="/shopping">
+                    <NavLink
+                      style={getActiveLinkStyle}
+                      to="/shopping"
+                      onClick={() => setChecked(false)}
+                    >
                       Shopping list
                     </NavLink>
                   </li>

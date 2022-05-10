@@ -12,7 +12,8 @@ header h1 {
   text-transform: uppercase;
   padding-top:2.5rem;
   line-height: 1.8rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  margin-left: -20px
 }
 
 /* LOGO */
@@ -23,9 +24,10 @@ header .logo {
   color: var(--title-color);
   margin-bottom: 15px;
   padding-top: 0.5rem;
+  margin-left: -30px;
 }
 header .logo img {
-  width: 80px;
+  width: 70px;
 }
 
 /* SIGN UP LOG IN */
@@ -38,15 +40,15 @@ header .logo img {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 40px;
-  width: 100px;
+  height: 60px;
+  width: 85px;
   color: var(--secondary-color);
   background-color: var(--main-color);
   border: 1px solid var(--secondary-color);
   cursor: pointer;
   z-index: 99;
   border-radius: 5px 5px;
-  
+  line-height: 30px;
 }
 
 .loginMenu li button {
@@ -57,7 +59,11 @@ header .logo img {
   padding: 0px 10px;
   font-size: 1rem;
   cursor: pointer;
+}
 
+.loginMenu li:first-child {
+  border-bottom: solid 1px;
+  width: 100%;
 }
 
 .loginMenu li button:hover {
@@ -76,7 +82,7 @@ header .logo img {
   line-height: 2.5rem;
   align-items: center;
   z-index: 1;
-  margin-top: 40px;
+  margin-top: 60px;
   padding: 15px 0px;
   border: 1px solid var(--secondary-color);
   background-color: var(--main-color);
@@ -114,7 +120,7 @@ header .logo img {
   line-height: 2rem;
   align-items: center;
   z-index: 1;
-  margin-top: 40px;
+  margin-top: 60px;
   padding: 15px 0px;
   border: 1px solid var(--secondary-color);
   background-color: var(--main-color);
@@ -281,8 +287,6 @@ header .logo img {
 }
 
 
-
-
 @media (min-width: 575.98px) {
   /* LOG IN */
   .loginMenu {
@@ -308,6 +312,11 @@ header .logo img {
     font-size: 1.2rem;
     cursor: pointer;
   }
+
+  .loginMenu li:first-child {
+    border-bottom: none;
+  }
+
 
   .dropdownSignup {
     position: absolute;
@@ -391,6 +400,8 @@ header .logo img {
     align-items: center;
     color: var(--title-color);
     margin-bottom: 15px;
+    margin-left: 10px;
+
   }
   header .logo img {
     width: 100px;
@@ -437,8 +448,6 @@ header .logo img {
     padding-bottom: 1rem;
   }
 }
-
-
 
 
 @media (min-width: 991.98px) {
