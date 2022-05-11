@@ -1,3 +1,5 @@
+import icone from "../assets/img/svg/icon.svg";
+
 export default function IngredientSelection({ ingredientSelect }) {
   const ingredientSelectFix = [...ingredientSelect];
   if (ingredientSelectFix.indexOf("Anejo rum") !== -1) {
@@ -27,7 +29,7 @@ export default function IngredientSelection({ ingredientSelect }) {
       }`,
       ingredientImage: `${
         ingredientSelectFix[i] === "question mark"
-          ? `../src/assets/img/svg/icon.svg`
+          ? icone
           : `https://www.thecocktaildb.com/images/ingredients/${ingredientSelectFix[i]}-small.png`
       }`,
     });
