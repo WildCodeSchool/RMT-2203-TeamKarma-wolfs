@@ -21,7 +21,11 @@ app.use(function AllowSelf(req, res, next) {
 
 const router = require("./router");
 
-app.use(router);
+app.use("/api", router);
+
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public", "index.html"));
+});
 
 // ready to export
 module.exports = app;
