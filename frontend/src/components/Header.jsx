@@ -37,7 +37,7 @@ export default function Header({
   const sendLogin = () => {
     setShowLogin(!showLogin);
     const getAuth = axios
-      .post(`http://localhost:5000/signIn`, {
+      .post(`https://project-2-teamkarma-wolfs.herokuapp.com/api/signIn`, {
         email: loginEmail,
         password: loginPassword,
       })
@@ -49,7 +49,7 @@ export default function Header({
     getAuth.then(() => {
       axios
         .post(
-          `http://localhost:5000/users/getUser`,
+          `https://project-2-teamkarma-wolfs.herokuapp.com/api/users/getUser`,
           {
             id: window.localStorage.getItem("userUuid"),
           },
@@ -73,7 +73,7 @@ export default function Header({
   const sendSignup = () => {
     setShowSignup(!showSignup);
     axios
-      .post(`http://localhost:5000/signUp`, {
+      .post(`https://project-2-teamkarma-wolfs.herokuapp.com/api/signUp`, {
         username: signupUsername,
         email: signupEmail,
         password: signupPassword,

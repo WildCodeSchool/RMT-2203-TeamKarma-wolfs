@@ -8,11 +8,16 @@ const app = express();
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../public")));
-app.use(function AllowSelf(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
+
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
     "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Authorization, Accept"
+    "Origin, X-Requested-With, Content, Accept, Content-Type, Authorization"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, PATCH, OPTIONS"
   );
   next();
 });
