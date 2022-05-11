@@ -214,6 +214,9 @@ export default function Header({
                   <span>f</span>inder
                 </h1>
               </div>
+              {user !== "" ? (
+                <p className="welcomeMessage">Welcome back, {user}</p>
+              ) : null}
               <div className="menu-burger">
                 <ul>
                   <li>

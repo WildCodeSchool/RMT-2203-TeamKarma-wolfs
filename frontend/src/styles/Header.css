@@ -2,7 +2,7 @@
 header {
   background-color: var(--background-header-footer);
   box-shadow: 0px 6px 13px -6px #1aea7f8e;
-  padding-bottom: 3rem;
+  padding-bottom: 6rem;
 }
 
 /* TITLE */
@@ -10,10 +10,10 @@ header h1 {
   font-family: "Nevrada", "sans-serif";
   text-shadow: 1px 1px 1px var(--shadow);
   text-transform: uppercase;
-  padding-top:2.5rem;
+  padding-top: 2.5rem;
   line-height: 1.8rem;
   font-size: 1.2rem;
-  margin-left: -20px
+  margin-left: -20px;
 }
 
 /* LOGO */
@@ -88,7 +88,6 @@ header .logo img {
   background-color: var(--main-color);
   color: var(--secondary-color);
   border-radius: 5px 5px;
-
 }
 
 .dropdownLogin input {
@@ -126,7 +125,6 @@ header .logo img {
   background-color: var(--main-color);
   color: var(--secondary-color);
   border-radius: 5px 5px;
-
 }
 
 .dropdownSignup input {
@@ -149,13 +147,12 @@ header .logo img {
 .welcomeMessage {
   color: #7731b0;
   text-shadow: 1px 1px 1px #ccba6a;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   margin-bottom: 10px;
 }
 
-
 /*BURGER MENU */
-.navbar-desktop{
+.navbar-desktop {
   display: none;
 }
 
@@ -163,11 +160,10 @@ header .logo img {
   max-width: 1050px;
   width: 100%;
   margin: auto;
-} 
+}
 
 .navbar-burger {
   width: 100%;
-  
 }
 
 .nav-container {
@@ -189,8 +185,8 @@ header .logo img {
   line-height: 7rem;
 }
 
-.navbar-burger .nav-container a:hover{
-    font-weight: bolder;
+.navbar-burger .nav-container a:hover {
+  font-weight: bolder;
 }
 
 .nav-container {
@@ -211,7 +207,7 @@ header .logo img {
   cursor: pointer;
 }
 
-.nav-container .hamburger-lines-mobile  {
+.nav-container .hamburger-lines-mobile {
   display: block;
   height: 26px;
   width: 32px;
@@ -250,7 +246,7 @@ header .logo img {
   margin-top: 0;
 }
 
-.navbar-burger  .menu-burger {
+.navbar-burger .menu-burger {
   padding-top: 20%;
   background-color: #121212;
   height: 100vh;
@@ -282,10 +278,9 @@ header .logo img {
   transform: rotate(-45deg);
 }
 
-.nav-container input[type="checkbox"]:checked ~ .logo{
+.nav-container input[type="checkbox"]:checked ~ .logo {
   display: none;
 }
-
 
 @media (min-width: 575.98px) {
   /* LOG IN */
@@ -302,7 +297,7 @@ header .logo img {
     width: 160px;
     cursor: pointer;
   }
-  
+
   .loginMenu li button {
     color: var(--secondary-color);
     background-color: Transparent;
@@ -317,6 +312,9 @@ header .logo img {
     border-bottom: none;
   }
 
+  .welcomeMessage {
+    font-size: 1.2rem;
+  }
 
   .dropdownSignup {
     position: absolute;
@@ -328,7 +326,6 @@ header .logo img {
     z-index: 1;
     margin-top: 40px;
     padding: 15px 0px;
-
   }
   label {
     display: flex;
@@ -342,7 +339,7 @@ header .logo img {
     margin: 3px 0px;
     padding: 3px 5px;
   }
-  
+
   .dropdownSignup button {
     margin-top: 10px;
     padding: 5px;
@@ -358,7 +355,6 @@ header .logo img {
     z-index: 1;
     margin-top: 40px;
     padding: 15px 0px;
- 
   }
 
   .dropdownLogin input {
@@ -366,10 +362,10 @@ header .logo img {
     margin: 3px 0px;
     padding: 3px 5px;
   }
-  
+
   .dropdownLogin button {
     margin-top: 10px;
- 
+
     padding: 5px;
     font-size: 1.2rem;
   }
@@ -391,8 +387,13 @@ header .logo img {
     display: none;
   }
   .navbar-desktop {
-    display:block;
+    display: block;
   }
+
+  .welcomeMessage {
+    font-size: 1.3rem;
+  }
+
   /* LOGO */
   header .logo {
     display: flex;
@@ -401,7 +402,6 @@ header .logo img {
     color: var(--title-color);
     margin-bottom: 15px;
     margin-left: 10px;
-
   }
   header .logo img {
     width: 100px;
@@ -445,14 +445,17 @@ header .logo img {
     transition: 0.2s;
   }
   header {
-    padding-bottom: 1rem;
+    padding-bottom: 0;
   }
 }
-
 
 @media (min-width: 991.98px) {
   header {
     padding-bottom: 0px;
+  }
+
+  .welcomeMessage {
+    font-size: 1.5rem;
   }
 }
 
@@ -471,7 +474,7 @@ header .logo img {
   header .logo img {
     width: 150px;
   }
- 
+
   /* TITLE */
   header h1 {
     font-size: 2rem;
@@ -493,4 +496,3 @@ header .logo img {
     line-height: 1.5rem;
   }
 }
-
