@@ -185,10 +185,6 @@ header .logo img {
   line-height: 7rem;
 }
 
-.navbar-burger .nav-container a:hover {
-  font-weight: bolder;
-}
-
 .nav-container {
   display: block;
   position: relative;
@@ -260,6 +256,10 @@ header .logo img {
   top: 0;
   left: 0;
   z-index: 99;
+}
+
+.navbar-burger .menu-burger ul li a:active {
+  color: var(--border-color);
 }
 
 .nav-container input[type="checkbox"]:checked ~ .menu-burger {
