@@ -7,7 +7,7 @@ import Shopping from "@pages/Shopping";
 
 export default function Main({ loggedIn }) {
   return (
-    <div>
+    <div id="content-wrap">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/favorites" element={<Favorites loggedIn={loggedIn} />} />
